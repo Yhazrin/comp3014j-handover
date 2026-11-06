@@ -1,0 +1,148 @@
+{
+  "scope": "Fixed public ten-scenario suite only, NOT private grade; numerical certificate with independently audited recurrence and convex-polytope maximisation.",
+  "candidate_score": 125.96,
+  "a_plus_threshold": 135.0,
+  "reduced_constraints": [
+    {
+      "weights": [
+        0.9082652134423251,
+        0.0009082652134423252,
+        0.09082652134423252
+      ],
+      "lower_bound": 0.004077258489219882
+    },
+    {
+      "weights": [
+        0.8333333333333333,
+        0.08333333333333333,
+        0.08333333333333333
+      ],
+      "lower_bound": 0.04312103766873028
+    },
+    {
+      "weights": [
+        0.6997869884337948,
+        0.009859068844383721,
+        0.2903539427218213
+      ],
+      "lower_bound": 0.010596943812188592
+    }
+  ],
+  "lower_bound_slack": 1e-08,
+  "qhull_max_score": 134.1171389763788,
+  "independent_vertex_enumeration_max_score": 134.11713897636994,
+  "conservative_display_bound": 134.12,
+  "max_forward_backward_dp_error": 0.0,
+  "coverage": [
+    {
+      "scenario": "practice-seed1",
+      "active_steps": 3414,
+      "initial_attachment_ties": 0,
+      "radio_covers_all_present_steps": true
+    },
+    {
+      "scenario": "practice-seed2",
+      "active_steps": 4580,
+      "initial_attachment_ties": 0,
+      "radio_covers_all_present_steps": true
+    },
+    {
+      "scenario": "practice-seed3",
+      "active_steps": 5370,
+      "initial_attachment_ties": 0,
+      "radio_covers_all_present_steps": true
+    },
+    {
+      "scenario": "practice-seed4",
+      "active_steps": 3438,
+      "initial_attachment_ties": 0,
+      "radio_covers_all_present_steps": true
+    },
+    {
+      "scenario": "practice-seed5",
+      "active_steps": 4368,
+      "initial_attachment_ties": 0,
+      "radio_covers_all_present_steps": true
+    },
+    {
+      "scenario": "practice-seed6",
+      "active_steps": 3218,
+      "initial_attachment_ties": 0,
+      "radio_covers_all_present_steps": true
+    },
+    {
+      "scenario": "practice-seed7",
+      "active_steps": 4074,
+      "initial_attachment_ties": 0,
+      "radio_covers_all_present_steps": true
+    },
+    {
+      "scenario": "practice-seed8",
+      "active_steps": 3772,
+      "initial_attachment_ties": 0,
+      "radio_covers_all_present_steps": true
+    },
+    {
+      "scenario": "practice-seed9",
+      "active_steps": 3629,
+      "initial_attachment_ties": 0,
+      "radio_covers_all_present_steps": true
+    },
+    {
+      "scenario": "practice-seed10",
+      "active_steps": 4536,
+      "initial_attachment_ties": 0,
+      "radio_covers_all_present_steps": true
+    }
+  ],
+  "observed_policies_satisfy_constraints": [
+    {
+      "run": "baseline_full",
+      "policy": "student",
+      "min_constraint_slack": 0.036730830844429074
+    },
+    {
+      "run": "baseline_full",
+      "policy": "a3_baseline",
+      "min_constraint_slack": 0.010551225789206819
+    },
+    {
+      "run": "baseline_full",
+      "policy": "no_handover_reference",
+      "min_constraint_slack": 0.036730830844429074
+    },
+    {
+      "run": "v09_full",
+      "policy": "student",
+      "min_constraint_slack": 0.0032683915429905386
+    },
+    {
+      "run": "v09_full",
+      "policy": "a3_baseline",
+      "min_constraint_slack": 0.010551225789206819
+    },
+    {
+      "run": "v09_full",
+      "policy": "no_handover_reference",
+      "min_constraint_slack": 0.036730830844429074
+    },
+    {
+      "run": "rollback_v09_full",
+      "policy": "student",
+      "min_constraint_slack": 0.036730830844429074
+    },
+    {
+      "run": "rollback_v09_full",
+      "policy": "a3_baseline",
+      "min_constraint_slack": 0.010551225789206819
+    },
+    {
+      "run": "rollback_v09_full",
+      "policy": "no_handover_reference",
+      "min_constraint_slack": 0.036730830844429074
+    }
+  ],
+  "candidate_is_not_a_plus": true,
+  "private_suite_status": "unknown",
+  "proof_note": "For any legal trajectory, relaxed handovers can reach the eventual cell after one interruption step; failed handovers can omit later failure costs. Relaxed RLF can select the eventual cell after one outage step instead of a longer recovery. Staying during omitted recovery costs at most one outage per step. Therefore each nonnegative weighted relaxed minimum is <= the corresponding legal cost. Perfect goodput/deadline and zero HO-failure/ping-pong costs further increase the score. The resulting log-score is convex on the bounded outer polytope, hence its maximum is attained at a vertex."
+}

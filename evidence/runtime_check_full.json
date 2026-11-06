@@ -1,0 +1,70 @@
+{
+  "algorithm_sha256": "63ce1efe2435389fe0b07f07f8f7c633b011415ea2b81bb173e75d899f1a8321",
+  "bytes": 5401,
+  "imports": [
+    "math",
+    "statistics"
+  ],
+  "python": "3.11.15 (main, Mar 20 2026, 00:41:54) [Clang 22.1.1 ]",
+  "edge_cases": [
+    {
+      "case": "no_candidates",
+      "output": {
+        "action": "stay"
+      }
+    },
+    {
+      "case": "no_serving",
+      "output": {
+        "action": "stay"
+      }
+    },
+    {
+      "case": "missing_power",
+      "output": {
+        "action": "stay"
+      }
+    },
+    {
+      "case": "nonfinite_power",
+      "output": {
+        "action": "stay"
+      }
+    },
+    {
+      "case": "missing_candidate_sinr",
+      "output": {
+        "action": "stay"
+      }
+    },
+    {
+      "case": "ineligible_candidate",
+      "output": {
+        "action": "stay"
+      }
+    }
+  ],
+  "instances_have_independent_state": true,
+  "decide_calls": 40249,
+  "decide_ms_mean": 0.004692240080498894,
+  "decide_ms_p99": 0.005916,
+  "decide_ms_max": 0.359416,
+  "reset_ms_max": 0.039291,
+  "scenario_wall_seconds_including_csv_load": {
+    "practice-seed1": 0.15137975000106962,
+    "practice-seed2": 0.18300879199887277,
+    "practice-seed3": 0.2053581670006679,
+    "practice-seed4": 0.17106883300039044,
+    "practice-seed5": 0.1882798750011716,
+    "practice-seed6": 0.1479572919997736,
+    "practice-seed7": 0.18460595800024748,
+    "practice-seed8": 0.1777946250003879,
+    "practice-seed9": 0.17835412500062375,
+    "practice-seed10": 0.1990795830006391
+  },
+  "suite_wall_seconds_including_csv_load": 1.8382134160001442,
+  "process_peak_rss_mib": 307.59375,
+  "evaluation_score": 126.13,
+  "suite": "./COMP3014J Assignment/student/handover-bench/data/practice",
+  "scope": "Observed local Python 3.11 process; does not emulate instructor sandbox or prove private-suite limits."
+}

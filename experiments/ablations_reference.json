@@ -1,0 +1,3524 @@
+[
+  {
+    "variant": "frozen",
+    "path": "./APlus_Study/experiments/reference_ablations/frozen.py",
+    "sha256": "63ce1efe2435389fe0b07f07f8f7c633b011415ea2b81bb173e75d899f1a8321",
+    "score": {
+      "score": 131.97,
+      "ratios": {
+        "goodput": 0.9986,
+        "deadline_delivery": 0.9838,
+        "outage": 1.1405,
+        "rlf": 1.8746,
+        "ho_failure": 1.8746,
+        "ping_pong": 6.2779,
+        "ho_attempts": 2.1087
+      },
+      "weights": {
+        "goodput": 0.3,
+        "deadline_delivery": 0.2,
+        "outage": 0.2,
+        "rlf": 0.15,
+        "ho_failure": 0.05,
+        "ping_pong": 0.05,
+        "ho_attempts": 0.05
+      },
+      "components": {
+        "goodput": {
+          "direction": "higher",
+          "normalized_weight": 0.3,
+          "weighted_log_contribution": -0.0004230354828009587,
+          "score_factor": 0.9995770539840926,
+          "effect": "regression"
+        },
+        "deadline_delivery": {
+          "direction": "higher",
+          "normalized_weight": 0.2,
+          "weighted_log_contribution": -0.003264089459340622,
+          "score_factor": 0.9967412318892982,
+          "effect": "regression"
+        },
+        "outage": {
+          "direction": "lower",
+          "normalized_weight": 0.2,
+          "weighted_log_contribution": 0.02628655725102297,
+          "score_factor": 1.0266350960572976,
+          "effect": "gain"
+        },
+        "rlf": {
+          "direction": "lower",
+          "normalized_weight": 0.15,
+          "weighted_log_contribution": 0.09426290476541732,
+          "score_factor": 1.0988486004784275,
+          "effect": "gain"
+        },
+        "ho_failure": {
+          "direction": "lower",
+          "normalized_weight": 0.05,
+          "weighted_log_contribution": 0.03142096825513911,
+          "score_factor": 1.0319198179490978,
+          "effect": "gain"
+        },
+        "ping_pong": {
+          "direction": "lower",
+          "normalized_weight": 0.05,
+          "weighted_log_contribution": 0.09185177825573405,
+          "score_factor": 1.0962023290173364,
+          "effect": "gain"
+        },
+        "ho_attempts": {
+          "direction": "lower",
+          "normalized_weight": 0.05,
+          "weighted_log_contribution": 0.03730413852052016,
+          "score_factor": 1.0380086712565613,
+          "effect": "gain"
+        }
+      }
+    },
+    "metrics": {
+      "per_scenario": [
+        {
+          "scenario_id": "practice-seed1",
+          "num_ues": 54,
+          "ho_attempts": 18,
+          "ho_completed": 17,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 1,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.010251903925014646,
+          "ho_interruption_fraction": 0.00497949619214997,
+          "radio_outage_fraction": 0.005272407732864675,
+          "offered_bytes": 73234622,
+          "delivered_bytes": 72942340,
+          "goodput_ratio": 0.9960089641754415,
+          "deadline_delivery_ratio": 0.920119926337573,
+          "deadline_misses": 359,
+          "undelivered_packets": 16,
+          "remaining_backlog_bytes": 292282,
+          "delay_p50_ms": 0.6080000000001746,
+          "delay_p95_ms": 57.05999999999949,
+          "delay_p99_ms": 638.3179999999993,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 1.5817223198594024,
+          "per_mode": {
+            "pedestrian": {
+              "num_ues": 11,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "cyclist": {
+              "num_ues": 3,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.004132231404958678
+            },
+            "bus": {
+              "num_ues": 5,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.003289473684210526
+            },
+            "car": {
+              "num_ues": 20,
+              "ho_attempts": 10,
+              "ho_completed": 9,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.014388489208633094
+            },
+            "train": {
+              "num_ues": 10,
+              "ho_attempts": 6,
+              "ho_completed": 6,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.026362038664323375
+            },
+            "uav": {
+              "num_ues": 5,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed2",
+          "num_ues": 65,
+          "ho_attempts": 15,
+          "ho_completed": 14,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 1,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.006331877729257642,
+          "ho_interruption_fraction": 0.003056768558951965,
+          "radio_outage_fraction": 0.0032751091703056767,
+          "offered_bytes": 98209430,
+          "delivered_bytes": 98209430,
+          "goodput_ratio": 1.0,
+          "deadline_delivery_ratio": 0.9559137651038194,
+          "deadline_misses": 266,
+          "undelivered_packets": 0,
+          "remaining_backlog_bytes": 0,
+          "delay_p50_ms": 0.7569999999996071,
+          "delay_p95_ms": 39.1140000000014,
+          "delay_p99_ms": 336.1939999999995,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 0.982532751091703,
+          "per_mode": {
+            "uav": {
+              "num_ues": 11,
+              "ho_attempts": 4,
+              "ho_completed": 4,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.005853658536585366
+            },
+            "bus": {
+              "num_ues": 8,
+              "ho_attempts": 3,
+              "ho_completed": 2,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.0074962518740629685
+            },
+            "cyclist": {
+              "num_ues": 6,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "car": {
+              "num_ues": 19,
+              "ho_attempts": 5,
+              "ho_completed": 5,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.012333965844402278
+            },
+            "pedestrian": {
+              "num_ues": 15,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "train": {
+              "num_ues": 6,
+              "ho_attempts": 3,
+              "ho_completed": 3,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.01152073732718894
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed3",
+          "num_ues": 65,
+          "ho_attempts": 19,
+          "ho_completed": 18,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 1,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.0067039106145251395,
+          "ho_interruption_fraction": 0.003538175046554935,
+          "radio_outage_fraction": 0.003165735567970205,
+          "offered_bytes": 133863693,
+          "delivered_bytes": 133854561,
+          "goodput_ratio": 0.9999317813531411,
+          "deadline_delivery_ratio": 0.9319740043329,
+          "deadline_misses": 559,
+          "undelivered_packets": 11,
+          "remaining_backlog_bytes": 9132,
+          "delay_p50_ms": 1.066000000000713,
+          "delay_p95_ms": 72.48499999999967,
+          "delay_p99_ms": 602.880000000001,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 1.0614525139664805,
+          "per_mode": {
+            "pedestrian": {
+              "num_ues": 25,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "car": {
+              "num_ues": 21,
+              "ho_attempts": 7,
+              "ho_completed": 7,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.006516587677725118
+            },
+            "uav": {
+              "num_ues": 4,
+              "ho_attempts": 3,
+              "ho_completed": 3,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.011904761904761904
+            },
+            "train": {
+              "num_ues": 7,
+              "ho_attempts": 8,
+              "ho_completed": 7,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.03103448275862069
+            },
+            "bus": {
+              "num_ues": 3,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.007662835249042145
+            },
+            "cyclist": {
+              "num_ues": 5,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed4",
+          "num_ues": 62,
+          "ho_attempts": 15,
+          "ho_completed": 15,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 0,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.008435136707388016,
+          "ho_interruption_fraction": 0.004363001745200698,
+          "radio_outage_fraction": 0.004072134962187318,
+          "offered_bytes": 87791735,
+          "delivered_bytes": 87158527,
+          "goodput_ratio": 0.9927873848261457,
+          "deadline_delivery_ratio": 0.8976487137428142,
+          "deadline_misses": 511,
+          "undelivered_packets": 37,
+          "remaining_backlog_bytes": 633208,
+          "delay_p50_ms": 0.9279999999998836,
+          "delay_p95_ms": 146.05299999999988,
+          "delay_p99_ms": 1313.5390000000007,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 1.3089005235602094,
+          "per_mode": {
+            "bus": {
+              "num_ues": 7,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "car": {
+              "num_ues": 21,
+              "ho_attempts": 8,
+              "ho_completed": 8,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.013474494706448507
+            },
+            "pedestrian": {
+              "num_ues": 19,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "train": {
+              "num_ues": 7,
+              "ho_attempts": 5,
+              "ho_completed": 5,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.025
+            },
+            "cyclist": {
+              "num_ues": 4,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.017857142857142856
+            },
+            "uav": {
+              "num_ues": 4,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.0055248618784530384
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed5",
+          "num_ues": 60,
+          "ho_attempts": 21,
+          "ho_completed": 21,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 0,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.00847069597069597,
+          "ho_interruption_fraction": 0.004807692307692308,
+          "radio_outage_fraction": 0.003663003663003663,
+          "offered_bytes": 104285816,
+          "delivered_bytes": 103803506,
+          "goodput_ratio": 0.9953751140998887,
+          "deadline_delivery_ratio": 0.8812619637554545,
+          "deadline_misses": 765,
+          "undelivered_packets": 27,
+          "remaining_backlog_bytes": 482310,
+          "delay_p50_ms": 1.772000000000844,
+          "delay_p95_ms": 238.74499999999898,
+          "delay_p99_ms": 876.530999999999,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 1.4423076923076923,
+          "per_mode": {
+            "uav": {
+              "num_ues": 11,
+              "ho_attempts": 2,
+              "ho_completed": 2,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.002583979328165375
+            },
+            "cyclist": {
+              "num_ues": 3,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.004975124378109453
+            },
+            "car": {
+              "num_ues": 19,
+              "ho_attempts": 8,
+              "ho_completed": 8,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.008614501076812634
+            },
+            "pedestrian": {
+              "num_ues": 14,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0009689922480620155
+            },
+            "train": {
+              "num_ues": 8,
+              "ho_attempts": 8,
+              "ho_completed": 8,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.02936378466557912
+            },
+            "bus": {
+              "num_ues": 5,
+              "ho_attempts": 2,
+              "ho_completed": 2,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.008450704225352112
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed6",
+          "num_ues": 53,
+          "ho_attempts": 13,
+          "ho_completed": 13,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 0,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.00839030453697949,
+          "ho_interruption_fraction": 0.004039776258545681,
+          "radio_outage_fraction": 0.00435052827843381,
+          "offered_bytes": 88972472,
+          "delivered_bytes": 88360545,
+          "goodput_ratio": 0.9931222884309655,
+          "deadline_delivery_ratio": 0.918837930006036,
+          "deadline_misses": 387,
+          "undelivered_packets": 39,
+          "remaining_backlog_bytes": 611927,
+          "delay_p50_ms": 1.1990000000005239,
+          "delay_p95_ms": 77.24200000000019,
+          "delay_p99_ms": 796.4130000000005,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 1.2119328775637042,
+          "per_mode": {
+            "train": {
+              "num_ues": 4,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.010471204188481676
+            },
+            "car": {
+              "num_ues": 20,
+              "ho_attempts": 11,
+              "ho_completed": 11,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.017624521072796936
+            },
+            "pedestrian": {
+              "num_ues": 14,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "bus": {
+              "num_ues": 7,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "cyclist": {
+              "num_ues": 3,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "uav": {
+              "num_ues": 5,
+              "ho_attempts": 2,
+              "ho_completed": 2,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.005571030640668524
+            }
+          }
+        }
+      ],
+      "aggregate": {
+        "ho_success_rate": 1.0,
+        "ho_failure_rate": 0.0,
+        "outage_fraction": 0.008097304913976817,
+        "ho_interruption_fraction": 0.004130818351515926,
+        "radio_outage_fraction": 0.003966486562460891,
+        "goodput_ratio": 0.9962042554809304,
+        "deadline_delivery_ratio": 0.9176260505464328,
+        "delay_p50_ms": 1.055000000000291,
+        "delay_p95_ms": 105.11649999999993,
+        "delay_p99_ms": 760.6458333333334,
+        "ho_failures_per_ue_min": 0.0,
+        "rlf_per_ue_min": 0.0,
+        "ping_pong_per_ue_min": 0.0,
+        "ho_attempts_per_ue_min": 1.2648081130581985,
+        "ping_pong_rate_per_completed_ho": 0.0,
+        "ho_attempts": 101,
+        "ho_completed": 98,
+        "ho_failed": 0,
+        "ho_ongoing_at_end": 3,
+        "rlf_events": 0,
+        "ping_pong_events": 0,
+        "deadline_misses": 2847,
+        "undelivered_packets": 130,
+        "num_scenarios": 6
+      }
+    }
+  },
+  {
+    "variant": "without_motion_regimes",
+    "path": "./APlus_Study/experiments/reference_ablations/without_motion_regimes.py",
+    "sha256": "58911bc5e46f116f2197516e5d135aa18d22bbd4817dd9532477a4c388197622",
+    "score": {
+      "score": 131.15,
+      "ratios": {
+        "goodput": 0.999,
+        "deadline_delivery": 0.9798,
+        "outage": 1.1128,
+        "rlf": 1.8746,
+        "ho_failure": 1.8746,
+        "ping_pong": 6.2779,
+        "ho_attempts": 2.0826
+      },
+      "weights": {
+        "goodput": 0.3,
+        "deadline_delivery": 0.2,
+        "outage": 0.2,
+        "rlf": 0.15,
+        "ho_failure": 0.05,
+        "ping_pong": 0.05,
+        "ho_attempts": 0.05
+      },
+      "components": {
+        "goodput": {
+          "direction": "higher",
+          "normalized_weight": 0.3,
+          "weighted_log_contribution": -0.00031465936030289056,
+          "score_factor": 0.9996853901397617,
+          "effect": "regression"
+        },
+        "deadline_delivery": {
+          "direction": "higher",
+          "normalized_weight": 0.2,
+          "weighted_log_contribution": -0.004087421582111938,
+          "score_factor": 0.9959209205556679,
+          "effect": "regression"
+        },
+        "outage": {
+          "direction": "lower",
+          "normalized_weight": 0.2,
+          "weighted_log_contribution": 0.021368019234044362,
+          "score_factor": 1.021597950159462,
+          "effect": "gain"
+        },
+        "rlf": {
+          "direction": "lower",
+          "normalized_weight": 0.15,
+          "weighted_log_contribution": 0.09426290476541732,
+          "score_factor": 1.0988486004784275,
+          "effect": "gain"
+        },
+        "ho_failure": {
+          "direction": "lower",
+          "normalized_weight": 0.05,
+          "weighted_log_contribution": 0.03142096825513911,
+          "score_factor": 1.0319198179490978,
+          "effect": "gain"
+        },
+        "ping_pong": {
+          "direction": "lower",
+          "normalized_weight": 0.05,
+          "weighted_log_contribution": 0.09185177825573405,
+          "score_factor": 1.0962023290173364,
+          "effect": "gain"
+        },
+        "ho_attempts": {
+          "direction": "lower",
+          "normalized_weight": 0.05,
+          "weighted_log_contribution": 0.03668071057864341,
+          "score_factor": 1.0373617493225475,
+          "effect": "gain"
+        }
+      }
+    },
+    "metrics": {
+      "per_scenario": [
+        {
+          "scenario_id": "practice-seed1",
+          "num_ues": 54,
+          "ho_attempts": 16,
+          "ho_completed": 16,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 0,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.010251903925014646,
+          "ho_interruption_fraction": 0.0046865846514352666,
+          "radio_outage_fraction": 0.005565319273579379,
+          "offered_bytes": 73234622,
+          "delivered_bytes": 72991789,
+          "goodput_ratio": 0.9966841776011351,
+          "deadline_delivery_ratio": 0.9200452348890392,
+          "deadline_misses": 367,
+          "undelivered_packets": 14,
+          "remaining_backlog_bytes": 242833,
+          "delay_p50_ms": 0.6080000000001746,
+          "delay_p95_ms": 60.49699999999939,
+          "delay_p99_ms": 645.887999999999,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 1.4059753954305798,
+          "per_mode": {
+            "pedestrian": {
+              "num_ues": 11,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "cyclist": {
+              "num_ues": 3,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.008264462809917356
+            },
+            "bus": {
+              "num_ues": 5,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.003289473684210526
+            },
+            "car": {
+              "num_ues": 20,
+              "ho_attempts": 8,
+              "ho_completed": 8,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.013589128697042365
+            },
+            "train": {
+              "num_ues": 10,
+              "ho_attempts": 6,
+              "ho_completed": 6,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.026362038664323375
+            },
+            "uav": {
+              "num_ues": 5,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed2",
+          "num_ues": 65,
+          "ho_attempts": 15,
+          "ho_completed": 14,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 1,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.006768558951965066,
+          "ho_interruption_fraction": 0.003056768558951965,
+          "radio_outage_fraction": 0.0037117903930131003,
+          "offered_bytes": 98209430,
+          "delivered_bytes": 98209430,
+          "goodput_ratio": 1.0,
+          "deadline_delivery_ratio": 0.9563065379770558,
+          "deadline_misses": 273,
+          "undelivered_packets": 0,
+          "remaining_backlog_bytes": 0,
+          "delay_p50_ms": 0.7639999999992142,
+          "delay_p95_ms": 39.82999999999993,
+          "delay_p99_ms": 340.0769999999993,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 0.982532751091703,
+          "per_mode": {
+            "uav": {
+              "num_ues": 11,
+              "ho_attempts": 4,
+              "ho_completed": 4,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.006829268292682927
+            },
+            "bus": {
+              "num_ues": 8,
+              "ho_attempts": 3,
+              "ho_completed": 2,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.0074962518740629685
+            },
+            "cyclist": {
+              "num_ues": 6,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "car": {
+              "num_ues": 19,
+              "ho_attempts": 5,
+              "ho_completed": 5,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.013282732447817837
+            },
+            "pedestrian": {
+              "num_ues": 15,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "train": {
+              "num_ues": 6,
+              "ho_attempts": 3,
+              "ho_completed": 3,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.01152073732718894
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed3",
+          "num_ues": 65,
+          "ho_attempts": 19,
+          "ho_completed": 18,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 1,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.006890130353817504,
+          "ho_interruption_fraction": 0.003538175046554935,
+          "radio_outage_fraction": 0.0033519553072625698,
+          "offered_bytes": 133863693,
+          "delivered_bytes": 133854561,
+          "goodput_ratio": 0.9999317813531411,
+          "deadline_delivery_ratio": 0.9293258180169883,
+          "deadline_misses": 586,
+          "undelivered_packets": 11,
+          "remaining_backlog_bytes": 9132,
+          "delay_p50_ms": 1.0800000000017462,
+          "delay_p95_ms": 76.29299999999967,
+          "delay_p99_ms": 602.880000000001,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 1.0614525139664805,
+          "per_mode": {
+            "pedestrian": {
+              "num_ues": 25,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "car": {
+              "num_ues": 21,
+              "ho_attempts": 7,
+              "ho_completed": 7,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.0071090047393364926
+            },
+            "uav": {
+              "num_ues": 4,
+              "ho_attempts": 3,
+              "ho_completed": 3,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.011904761904761904
+            },
+            "train": {
+              "num_ues": 7,
+              "ho_attempts": 8,
+              "ho_completed": 7,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.03103448275862069
+            },
+            "bus": {
+              "num_ues": 3,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.007662835249042145
+            },
+            "cyclist": {
+              "num_ues": 5,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed4",
+          "num_ues": 62,
+          "ho_attempts": 15,
+          "ho_completed": 15,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 0,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.009016870273414777,
+          "ho_interruption_fraction": 0.004363001745200698,
+          "radio_outage_fraction": 0.004653868528214078,
+          "offered_bytes": 87791735,
+          "delivered_bytes": 87158527,
+          "goodput_ratio": 0.9927873848261457,
+          "deadline_delivery_ratio": 0.8970812001835936,
+          "deadline_misses": 516,
+          "undelivered_packets": 37,
+          "remaining_backlog_bytes": 633208,
+          "delay_p50_ms": 0.9290000000000873,
+          "delay_p95_ms": 143.52200000000084,
+          "delay_p99_ms": 1190.0750000000007,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 1.3089005235602094,
+          "per_mode": {
+            "bus": {
+              "num_ues": 7,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "car": {
+              "num_ues": 21,
+              "ho_attempts": 8,
+              "ho_completed": 8,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.016361886429258902
+            },
+            "pedestrian": {
+              "num_ues": 19,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "train": {
+              "num_ues": 7,
+              "ho_attempts": 5,
+              "ho_completed": 5,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.025
+            },
+            "cyclist": {
+              "num_ues": 4,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.013392857142857142
+            },
+            "uav": {
+              "num_ues": 4,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.0055248618784530384
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed5",
+          "num_ues": 60,
+          "ho_attempts": 25,
+          "ho_completed": 25,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 0,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.010531135531135532,
+          "ho_interruption_fraction": 0.005723443223443223,
+          "radio_outage_fraction": 0.004807692307692308,
+          "offered_bytes": 104285816,
+          "delivered_bytes": 103962837,
+          "goodput_ratio": 0.9969029441165805,
+          "deadline_delivery_ratio": 0.8612633955896745,
+          "deadline_misses": 890,
+          "undelivered_packets": 18,
+          "remaining_backlog_bytes": 322979,
+          "delay_p50_ms": 1.7419999999983702,
+          "delay_p95_ms": 298.53099999999904,
+          "delay_p99_ms": 940.3140000000003,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 1.717032967032967,
+          "per_mode": {
+            "uav": {
+              "num_ues": 11,
+              "ho_attempts": 2,
+              "ho_completed": 2,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.003875968992248062
+            },
+            "cyclist": {
+              "num_ues": 3,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.004975124378109453
+            },
+            "car": {
+              "num_ues": 19,
+              "ho_attempts": 9,
+              "ho_completed": 9,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.01148600143575018
+            },
+            "pedestrian": {
+              "num_ues": 14,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.001937984496124031
+            },
+            "train": {
+              "num_ues": 8,
+              "ho_attempts": 8,
+              "ho_completed": 8,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.02936378466557912
+            },
+            "bus": {
+              "num_ues": 5,
+              "ho_attempts": 4,
+              "ho_completed": 4,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.016901408450704224
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed6",
+          "num_ues": 53,
+          "ho_attempts": 13,
+          "ho_completed": 13,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 0,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.009322560596643879,
+          "ho_interruption_fraction": 0.004039776258545681,
+          "radio_outage_fraction": 0.0052827843380981974,
+          "offered_bytes": 88972472,
+          "delivered_bytes": 88360545,
+          "goodput_ratio": 0.9931222884309655,
+          "deadline_delivery_ratio": 0.9186223914291153,
+          "deadline_misses": 398,
+          "undelivered_packets": 39,
+          "remaining_backlog_bytes": 611927,
+          "delay_p50_ms": 1.2070000000003347,
+          "delay_p95_ms": 82.02300000000105,
+          "delay_p99_ms": 796.4130000000005,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 1.2119328775637042,
+          "per_mode": {
+            "train": {
+              "num_ues": 4,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.010471204188481676
+            },
+            "car": {
+              "num_ues": 20,
+              "ho_attempts": 11,
+              "ho_completed": 11,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.019157088122605363
+            },
+            "pedestrian": {
+              "num_ues": 14,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "bus": {
+              "num_ues": 7,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "cyclist": {
+              "num_ues": 3,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "uav": {
+              "num_ues": 5,
+              "ho_attempts": 2,
+              "ho_completed": 2,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.008356545961002786
+            }
+          }
+        }
+      ],
+      "aggregate": {
+        "ho_success_rate": 1.0,
+        "ho_failure_rate": 0.0,
+        "outage_fraction": 0.008796859938665235,
+        "ho_interruption_fraction": 0.004234624914021962,
+        "radio_outage_fraction": 0.004562235024643272,
+        "goodput_ratio": 0.9965714293879947,
+        "deadline_delivery_ratio": 0.9137740963475777,
+        "delay_p50_ms": 1.054999999999988,
+        "delay_p95_ms": 116.78266666666666,
+        "delay_p99_ms": 752.6078333333335,
+        "ho_failures_per_ue_min": 0.0,
+        "rlf_per_ue_min": 0.0,
+        "ping_pong_per_ue_min": 0.0,
+        "ho_attempts_per_ue_min": 1.281304504774274,
+        "ping_pong_rate_per_completed_ho": 0.0,
+        "ho_attempts": 103,
+        "ho_completed": 101,
+        "ho_failed": 0,
+        "ho_ongoing_at_end": 2,
+        "rlf_events": 0,
+        "ping_pong_events": 0,
+        "deadline_misses": 3030,
+        "undelivered_packets": 119,
+        "num_scenarios": 6
+      }
+    }
+  },
+  {
+    "variant": "without_backlog_trigger",
+    "path": "./APlus_Study/experiments/reference_ablations/without_backlog_trigger.py",
+    "sha256": "44df0a79e850aea254f37c237456de934a64e5de9e9e7593491709a87e3978ff",
+    "score": {
+      "score": 131.53,
+      "ratios": {
+        "goodput": 0.9975,
+        "deadline_delivery": 0.9722,
+        "outage": 1.1285,
+        "rlf": 1.8746,
+        "ho_failure": 1.8746,
+        "ping_pong": 6.2779,
+        "ho_attempts": 2.1707
+      },
+      "weights": {
+        "goodput": 0.3,
+        "deadline_delivery": 0.2,
+        "outage": 0.2,
+        "rlf": 0.15,
+        "ho_failure": 0.05,
+        "ping_pong": 0.05,
+        "ho_attempts": 0.05
+      },
+      "components": {
+        "goodput": {
+          "direction": "higher",
+          "normalized_weight": 0.3,
+          "weighted_log_contribution": -0.000741854721509704,
+          "score_factor": 0.9992584203846704,
+          "effect": "regression"
+        },
+        "deadline_delivery": {
+          "direction": "higher",
+          "normalized_weight": 0.2,
+          "weighted_log_contribution": -0.005630163744068659,
+          "score_factor": 0.9943856559247909,
+          "effect": "regression"
+        },
+        "outage": {
+          "direction": "lower",
+          "normalized_weight": 0.2,
+          "weighted_log_contribution": 0.024172146991770223,
+          "score_factor": 1.0244666615656268,
+          "effect": "gain"
+        },
+        "rlf": {
+          "direction": "lower",
+          "normalized_weight": 0.15,
+          "weighted_log_contribution": 0.09426290476541732,
+          "score_factor": 1.0988486004784275,
+          "effect": "gain"
+        },
+        "ho_failure": {
+          "direction": "lower",
+          "normalized_weight": 0.05,
+          "weighted_log_contribution": 0.03142096825513911,
+          "score_factor": 1.0319198179490978,
+          "effect": "gain"
+        },
+        "ping_pong": {
+          "direction": "lower",
+          "normalized_weight": 0.05,
+          "weighted_log_contribution": 0.09185177825573405,
+          "score_factor": 1.0962023290173364,
+          "effect": "gain"
+        },
+        "ho_attempts": {
+          "direction": "lower",
+          "normalized_weight": 0.05,
+          "weighted_log_contribution": 0.038752474219376686,
+          "score_factor": 1.0395131454997504,
+          "effect": "gain"
+        }
+      }
+    },
+    "metrics": {
+      "per_scenario": [
+        {
+          "scenario_id": "practice-seed1",
+          "num_ues": 54,
+          "ho_attempts": 17,
+          "ho_completed": 16,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 1,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.00995899238429994,
+          "ho_interruption_fraction": 0.0046865846514352666,
+          "radio_outage_fraction": 0.005272407732864675,
+          "offered_bytes": 73234622,
+          "delivered_bytes": 72468053,
+          "goodput_ratio": 0.9895326967073033,
+          "deadline_delivery_ratio": 0.8997119695654331,
+          "deadline_misses": 415,
+          "undelivered_packets": 45,
+          "remaining_backlog_bytes": 766569,
+          "delay_p50_ms": 0.6049999999995634,
+          "delay_p95_ms": 69.33899999999994,
+          "delay_p99_ms": 617.9860000000008,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 1.493848857644991,
+          "per_mode": {
+            "pedestrian": {
+              "num_ues": 11,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "cyclist": {
+              "num_ues": 3,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.004132231404958678
+            },
+            "bus": {
+              "num_ues": 5,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.003289473684210526
+            },
+            "car": {
+              "num_ues": 20,
+              "ho_attempts": 9,
+              "ho_completed": 8,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.013589128697042365
+            },
+            "train": {
+              "num_ues": 10,
+              "ho_attempts": 6,
+              "ho_completed": 6,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.026362038664323375
+            },
+            "uav": {
+              "num_ues": 5,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed2",
+          "num_ues": 65,
+          "ho_attempts": 15,
+          "ho_completed": 14,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 1,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.006550218340611353,
+          "ho_interruption_fraction": 0.003056768558951965,
+          "radio_outage_fraction": 0.0034934497816593887,
+          "offered_bytes": 98209430,
+          "delivered_bytes": 98209430,
+          "goodput_ratio": 1.0,
+          "deadline_delivery_ratio": 0.9531233202351342,
+          "deadline_misses": 280,
+          "undelivered_packets": 0,
+          "remaining_backlog_bytes": 0,
+          "delay_p50_ms": 0.7579999999998108,
+          "delay_p95_ms": 39.46800000000076,
+          "delay_p99_ms": 353.3319999999985,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 0.982532751091703,
+          "per_mode": {
+            "uav": {
+              "num_ues": 11,
+              "ho_attempts": 4,
+              "ho_completed": 4,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.005853658536585366
+            },
+            "bus": {
+              "num_ues": 8,
+              "ho_attempts": 3,
+              "ho_completed": 2,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.0074962518740629685
+            },
+            "cyclist": {
+              "num_ues": 6,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "car": {
+              "num_ues": 19,
+              "ho_attempts": 5,
+              "ho_completed": 5,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.012333965844402278
+            },
+            "pedestrian": {
+              "num_ues": 15,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "train": {
+              "num_ues": 6,
+              "ho_attempts": 3,
+              "ho_completed": 3,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.013824884792626729
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed3",
+          "num_ues": 65,
+          "ho_attempts": 19,
+          "ho_completed": 18,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 1,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.0074487895716946,
+          "ho_interruption_fraction": 0.003538175046554935,
+          "radio_outage_fraction": 0.003910614525139665,
+          "offered_bytes": 133863693,
+          "delivered_bytes": 133854561,
+          "goodput_ratio": 0.9999317813531411,
+          "deadline_delivery_ratio": 0.9281813254621625,
+          "deadline_misses": 589,
+          "undelivered_packets": 11,
+          "remaining_backlog_bytes": 9132,
+          "delay_p50_ms": 1.0620000000017171,
+          "delay_p95_ms": 77.21300000000019,
+          "delay_p99_ms": 793.0769999999993,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 1.0614525139664805,
+          "per_mode": {
+            "pedestrian": {
+              "num_ues": 25,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "car": {
+              "num_ues": 21,
+              "ho_attempts": 7,
+              "ho_completed": 7,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.007701421800947867
+            },
+            "uav": {
+              "num_ues": 4,
+              "ho_attempts": 3,
+              "ho_completed": 3,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.014285714285714285
+            },
+            "train": {
+              "num_ues": 7,
+              "ho_attempts": 8,
+              "ho_completed": 7,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.032758620689655175
+            },
+            "bus": {
+              "num_ues": 3,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.007662835249042145
+            },
+            "cyclist": {
+              "num_ues": 5,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed4",
+          "num_ues": 62,
+          "ho_attempts": 15,
+          "ho_completed": 15,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 0,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.009016870273414777,
+          "ho_interruption_fraction": 0.004363001745200698,
+          "radio_outage_fraction": 0.004653868528214078,
+          "offered_bytes": 87791735,
+          "delivered_bytes": 87158527,
+          "goodput_ratio": 0.9927873848261457,
+          "deadline_delivery_ratio": 0.8904634246036942,
+          "deadline_misses": 548,
+          "undelivered_packets": 37,
+          "remaining_backlog_bytes": 633208,
+          "delay_p50_ms": 0.9429999999993015,
+          "delay_p95_ms": 166.3780000000006,
+          "delay_p99_ms": 1528.4500000000007,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 1.3089005235602094,
+          "per_mode": {
+            "bus": {
+              "num_ues": 7,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "car": {
+              "num_ues": 21,
+              "ho_attempts": 8,
+              "ho_completed": 8,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.015399422521655439
+            },
+            "pedestrian": {
+              "num_ues": 19,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "train": {
+              "num_ues": 7,
+              "ho_attempts": 5,
+              "ho_completed": 5,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.025
+            },
+            "cyclist": {
+              "num_ues": 4,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.017857142857142856
+            },
+            "uav": {
+              "num_ues": 4,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.0055248618784530384
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed5",
+          "num_ues": 60,
+          "ho_attempts": 19,
+          "ho_completed": 19,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 0,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.0086996336996337,
+          "ho_interruption_fraction": 0.00434981684981685,
+          "radio_outage_fraction": 0.00434981684981685,
+          "offered_bytes": 104285816,
+          "delivered_bytes": 103803506,
+          "goodput_ratio": 0.9953751140998887,
+          "deadline_delivery_ratio": 0.8543920968120918,
+          "deadline_misses": 941,
+          "undelivered_packets": 27,
+          "remaining_backlog_bytes": 482310,
+          "delay_p50_ms": 1.805000000000291,
+          "delay_p95_ms": 333.1419999999998,
+          "delay_p99_ms": 2041.0339999999997,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 1.304945054945055,
+          "per_mode": {
+            "uav": {
+              "num_ues": 11,
+              "ho_attempts": 2,
+              "ho_completed": 2,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.002583979328165375
+            },
+            "cyclist": {
+              "num_ues": 3,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.004975124378109453
+            },
+            "car": {
+              "num_ues": 19,
+              "ho_attempts": 6,
+              "ho_completed": 6,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.007178750897343862
+            },
+            "pedestrian": {
+              "num_ues": 14,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0009689922480620155
+            },
+            "train": {
+              "num_ues": 8,
+              "ho_attempts": 8,
+              "ho_completed": 8,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.03262642740619902
+            },
+            "bus": {
+              "num_ues": 5,
+              "ho_attempts": 2,
+              "ho_completed": 2,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.011267605633802818
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed6",
+          "num_ues": 53,
+          "ho_attempts": 13,
+          "ho_completed": 13,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 0,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.00870105655686762,
+          "ho_interruption_fraction": 0.004039776258545681,
+          "radio_outage_fraction": 0.0046612802983219395,
+          "offered_bytes": 88972472,
+          "delivered_bytes": 88360545,
+          "goodput_ratio": 0.9931222884309655,
+          "deadline_delivery_ratio": 0.91372151602127,
+          "deadline_misses": 415,
+          "undelivered_packets": 39,
+          "remaining_backlog_bytes": 611927,
+          "delay_p50_ms": 1.2009999999991123,
+          "delay_p95_ms": 79.75300000000061,
+          "delay_p99_ms": 815.9110000000001,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 1.2119328775637042,
+          "per_mode": {
+            "train": {
+              "num_ues": 4,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.010471204188481676
+            },
+            "car": {
+              "num_ues": 20,
+              "ho_attempts": 11,
+              "ho_completed": 11,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.01839080459770115
+            },
+            "pedestrian": {
+              "num_ues": 14,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "bus": {
+              "num_ues": 7,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "cyclist": {
+              "num_ues": 3,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "uav": {
+              "num_ues": 5,
+              "ho_attempts": 2,
+              "ho_completed": 2,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.005571030640668524
+            }
+          }
+        }
+      ],
+      "aggregate": {
+        "ho_success_rate": 1.0,
+        "ho_failure_rate": 0.0,
+        "outage_fraction": 0.008395926804420332,
+        "ho_interruption_fraction": 0.004005687185084233,
+        "radio_outage_fraction": 0.0043902396193360995,
+        "goodput_ratio": 0.995124877569574,
+        "deadline_delivery_ratio": 0.9065989421166311,
+        "delay_p50_ms": 1.0623333333332994,
+        "delay_p95_ms": 127.54883333333366,
+        "delay_p99_ms": 1024.965,
+        "ho_failures_per_ue_min": 0.0,
+        "rlf_per_ue_min": 0.0,
+        "ping_pong_per_ue_min": 0.0,
+        "ho_attempts_per_ue_min": 1.2272687631286905,
+        "ping_pong_rate_per_completed_ho": 0.0,
+        "ho_attempts": 98,
+        "ho_completed": 95,
+        "ho_failed": 0,
+        "ho_ongoing_at_end": 3,
+        "rlf_events": 0,
+        "ping_pong_events": 0,
+        "deadline_misses": 3188,
+        "undelivered_packets": 159,
+        "num_scenarios": 6
+      }
+    }
+  },
+  {
+    "variant": "without_target_risk_discount",
+    "path": "./APlus_Study/experiments/reference_ablations/without_target_risk_discount.py",
+    "sha256": "786380e8fe1e6a74419366808e1c85ce60037a95d80d22586da4327fdac9dcfe",
+    "score": {
+      "score": 124.34,
+      "ratios": {
+        "goodput": 0.9988,
+        "deadline_delivery": 0.9826,
+        "outage": 1.131,
+        "rlf": 1.4522,
+        "ho_failure": 1.4522,
+        "ping_pong": 6.2779,
+        "ho_attempts": 1.8445
+      },
+      "weights": {
+        "goodput": 0.3,
+        "deadline_delivery": 0.2,
+        "outage": 0.2,
+        "rlf": 0.15,
+        "ho_failure": 0.05,
+        "ping_pong": 0.05,
+        "ho_attempts": 0.05
+      },
+      "components": {
+        "goodput": {
+          "direction": "higher",
+          "normalized_weight": 0.3,
+          "weighted_log_contribution": -0.000351676401870673,
+          "score_factor": 0.9996483854290268,
+          "effect": "regression"
+        },
+        "deadline_delivery": {
+          "direction": "higher",
+          "normalized_weight": 0.2,
+          "weighted_log_contribution": -0.003515709544910259,
+          "score_factor": 0.9964904633257662,
+          "effect": "regression"
+        },
+        "outage": {
+          "direction": "lower",
+          "normalized_weight": 0.2,
+          "weighted_log_contribution": 0.02461851570474155,
+          "score_factor": 1.0249240535059634,
+          "effect": "gain"
+        },
+        "rlf": {
+          "direction": "lower",
+          "normalized_weight": 0.15,
+          "weighted_log_contribution": 0.05596581713295563,
+          "score_factor": 1.0575615326334793,
+          "effect": "gain"
+        },
+        "ho_failure": {
+          "direction": "lower",
+          "normalized_weight": 0.05,
+          "weighted_log_contribution": 0.01865527237765188,
+          "score_factor": 1.018830369102294,
+          "effect": "gain"
+        },
+        "ping_pong": {
+          "direction": "lower",
+          "normalized_weight": 0.05,
+          "weighted_log_contribution": 0.09185177825573405,
+          "score_factor": 1.0962023290173364,
+          "effect": "gain"
+        },
+        "ho_attempts": {
+          "direction": "lower",
+          "normalized_weight": 0.05,
+          "weighted_log_contribution": 0.03061163943725427,
+          "score_factor": 1.0310849933720476,
+          "effect": "gain"
+        }
+      }
+    },
+    "metrics": {
+      "per_scenario": [
+        {
+          "scenario_id": "practice-seed1",
+          "num_ues": 54,
+          "ho_attempts": 22,
+          "ho_completed": 21,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 1,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.011423550087873463,
+          "ho_interruption_fraction": 0.006151142355008787,
+          "radio_outage_fraction": 0.005272407732864675,
+          "offered_bytes": 73234622,
+          "delivered_bytes": 72919209,
+          "goodput_ratio": 0.9956931162968248,
+          "deadline_delivery_ratio": 0.9200122040638101,
+          "deadline_misses": 358,
+          "undelivered_packets": 19,
+          "remaining_backlog_bytes": 315413,
+          "delay_p50_ms": 0.6080000000001746,
+          "delay_p95_ms": 57.46900000000096,
+          "delay_p99_ms": 610.2160000000003,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 1.9332161687170473,
+          "per_mode": {
+            "pedestrian": {
+              "num_ues": 11,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "cyclist": {
+              "num_ues": 3,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.004132231404958678
+            },
+            "bus": {
+              "num_ues": 5,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.003289473684210526
+            },
+            "car": {
+              "num_ues": 20,
+              "ho_attempts": 12,
+              "ho_completed": 11,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.017585931254996003
+            },
+            "train": {
+              "num_ues": 10,
+              "ho_attempts": 6,
+              "ho_completed": 6,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.022847100175746926
+            },
+            "uav": {
+              "num_ues": 5,
+              "ho_attempts": 2,
+              "ho_completed": 2,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.007326007326007326
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed2",
+          "num_ues": 65,
+          "ho_attempts": 17,
+          "ho_completed": 16,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 1,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.006550218340611353,
+          "ho_interruption_fraction": 0.0034934497816593887,
+          "radio_outage_fraction": 0.003056768558951965,
+          "offered_bytes": 98209430,
+          "delivered_bytes": 98209430,
+          "goodput_ratio": 1.0,
+          "deadline_delivery_ratio": 0.955809813782648,
+          "deadline_misses": 269,
+          "undelivered_packets": 0,
+          "remaining_backlog_bytes": 0,
+          "delay_p50_ms": 0.7560000000012224,
+          "delay_p95_ms": 39.85900000000038,
+          "delay_p99_ms": 336.1939999999995,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 1.1135371179039302,
+          "per_mode": {
+            "uav": {
+              "num_ues": 11,
+              "ho_attempts": 4,
+              "ho_completed": 4,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.005853658536585366
+            },
+            "bus": {
+              "num_ues": 8,
+              "ho_attempts": 4,
+              "ho_completed": 3,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.008995502248875561
+            },
+            "cyclist": {
+              "num_ues": 6,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "car": {
+              "num_ues": 19,
+              "ho_attempts": 6,
+              "ho_completed": 6,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.012333965844402278
+            },
+            "pedestrian": {
+              "num_ues": 15,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "train": {
+              "num_ues": 6,
+              "ho_attempts": 3,
+              "ho_completed": 3,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.01152073732718894
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed3",
+          "num_ues": 65,
+          "ho_attempts": 22,
+          "ho_completed": 21,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 1,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.00707635009310987,
+          "ho_interruption_fraction": 0.00409683426443203,
+          "radio_outage_fraction": 0.0029795158286778397,
+          "offered_bytes": 133863693,
+          "delivered_bytes": 133854561,
+          "goodput_ratio": 0.9999317813531411,
+          "deadline_delivery_ratio": 0.9312086287653815,
+          "deadline_misses": 575,
+          "undelivered_packets": 11,
+          "remaining_backlog_bytes": 9132,
+          "delay_p50_ms": 1.0740000000005239,
+          "delay_p95_ms": 75.42100000000028,
+          "delay_p99_ms": 595.6379999999999,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 1.229050279329609,
+          "per_mode": {
+            "pedestrian": {
+              "num_ues": 25,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "car": {
+              "num_ues": 21,
+              "ho_attempts": 7,
+              "ho_completed": 7,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.006516587677725118
+            },
+            "uav": {
+              "num_ues": 4,
+              "ho_attempts": 3,
+              "ho_completed": 3,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.011904761904761904
+            },
+            "train": {
+              "num_ues": 7,
+              "ho_attempts": 9,
+              "ho_completed": 8,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.029310344827586206
+            },
+            "bus": {
+              "num_ues": 3,
+              "ho_attempts": 3,
+              "ho_completed": 3,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.019157088122605363
+            },
+            "cyclist": {
+              "num_ues": 5,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed4",
+          "num_ues": 62,
+          "ho_attempts": 16,
+          "ho_completed": 15,
+          "ho_failed": 1,
+          "ho_ongoing_at_end": 0,
+          "ho_success_rate": 0.9375,
+          "ho_failure_rate": 0.0625,
+          "rlf_events": 1,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.009016870273414777,
+          "ho_interruption_fraction": 0.004653868528214078,
+          "radio_outage_fraction": 0.0029086678301337987,
+          "offered_bytes": 87791735,
+          "delivered_bytes": 87158527,
+          "goodput_ratio": 0.9927873848261457,
+          "deadline_delivery_ratio": 0.8976400341102725,
+          "deadline_misses": 516,
+          "undelivered_packets": 37,
+          "remaining_backlog_bytes": 633208,
+          "delay_p50_ms": 0.9279999999998836,
+          "delay_p95_ms": 147.04600000000028,
+          "delay_p99_ms": 1309.1719999999987,
+          "ho_failures_per_ue_min": 0.08726003490401396,
+          "rlf_per_ue_min": 0.08726003490401396,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 1.3961605584642234,
+          "per_mode": {
+            "bus": {
+              "num_ues": 7,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "car": {
+              "num_ues": 21,
+              "ho_attempts": 9,
+              "ho_completed": 8,
+              "ho_failed": 1,
+              "ho_success_rate": 0.8888888888888888,
+              "outage_fraction": 0.016361886429258902
+            },
+            "pedestrian": {
+              "num_ues": 19,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "train": {
+              "num_ues": 7,
+              "ho_attempts": 5,
+              "ho_completed": 5,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.025
+            },
+            "cyclist": {
+              "num_ues": 4,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.013392857142857142
+            },
+            "uav": {
+              "num_ues": 4,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.0055248618784530384
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed5",
+          "num_ues": 60,
+          "ho_attempts": 24,
+          "ho_completed": 24,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 0,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.00847069597069597,
+          "ho_interruption_fraction": 0.005494505494505495,
+          "radio_outage_fraction": 0.002976190476190476,
+          "offered_bytes": 104285816,
+          "delivered_bytes": 103987709,
+          "goodput_ratio": 0.9971414425140999,
+          "deadline_delivery_ratio": 0.8751743765422519,
+          "deadline_misses": 785,
+          "undelivered_packets": 17,
+          "remaining_backlog_bytes": 298107,
+          "delay_p50_ms": 1.7219999999997526,
+          "delay_p95_ms": 245.40299999999843,
+          "delay_p99_ms": 903.6229999999996,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 1.6483516483516483,
+          "per_mode": {
+            "uav": {
+              "num_ues": 11,
+              "ho_attempts": 2,
+              "ho_completed": 2,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.002583979328165375
+            },
+            "cyclist": {
+              "num_ues": 3,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.004975124378109453
+            },
+            "car": {
+              "num_ues": 19,
+              "ho_attempts": 9,
+              "ho_completed": 9,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.010050251256281407
+            },
+            "pedestrian": {
+              "num_ues": 14,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0009689922480620155
+            },
+            "train": {
+              "num_ues": 8,
+              "ho_attempts": 9,
+              "ho_completed": 9,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.026101141924959218
+            },
+            "bus": {
+              "num_ues": 5,
+              "ho_attempts": 3,
+              "ho_completed": 3,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.008450704225352112
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed6",
+          "num_ues": 53,
+          "ho_attempts": 15,
+          "ho_completed": 14,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 1,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.0074580484773151025,
+          "ho_interruption_fraction": 0.00435052827843381,
+          "radio_outage_fraction": 0.003107520198881293,
+          "offered_bytes": 88972472,
+          "delivered_bytes": 88360545,
+          "goodput_ratio": 0.9931222884309655,
+          "deadline_delivery_ratio": 0.918837930006036,
+          "deadline_misses": 387,
+          "undelivered_packets": 39,
+          "remaining_backlog_bytes": 611927,
+          "delay_p50_ms": 1.2009999999991123,
+          "delay_p95_ms": 77.24200000000019,
+          "delay_p99_ms": 793.4639999999999,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 1.3983840894965818,
+          "per_mode": {
+            "train": {
+              "num_ues": 4,
+              "ho_attempts": 1,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.010471204188481676
+            },
+            "car": {
+              "num_ues": 20,
+              "ho_attempts": 12,
+              "ho_completed": 12,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.01532567049808429
+            },
+            "pedestrian": {
+              "num_ues": 14,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "bus": {
+              "num_ues": 7,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "cyclist": {
+              "num_ues": 3,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "uav": {
+              "num_ues": 5,
+              "ho_attempts": 2,
+              "ho_completed": 2,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.005571030640668524
+            }
+          }
+        }
+      ],
+      "aggregate": {
+        "ho_success_rate": 0.9895833333333334,
+        "ho_failure_rate": 0.010416666666666666,
+        "outage_fraction": 0.00833262220717009,
+        "ho_interruption_fraction": 0.004706721450375598,
+        "radio_outage_fraction": 0.003383511770950008,
+        "goodput_ratio": 0.9964460022368629,
+        "deadline_delivery_ratio": 0.9164471645450667,
+        "delay_p50_ms": 1.0481666666667782,
+        "delay_p95_ms": 107.07333333333342,
+        "delay_p99_ms": 758.0511666666663,
+        "ho_failures_per_ue_min": 0.014543339150668994,
+        "rlf_per_ue_min": 0.014543339150668994,
+        "ping_pong_per_ue_min": 0.0,
+        "ho_attempts_per_ue_min": 1.4531166437105068,
+        "ping_pong_rate_per_completed_ho": 0.0,
+        "ho_attempts": 116,
+        "ho_completed": 111,
+        "ho_failed": 1,
+        "ho_ongoing_at_end": 4,
+        "rlf_events": 1,
+        "ping_pong_events": 0,
+        "deadline_misses": 2890,
+        "undelivered_packets": 123,
+        "num_scenarios": 6
+      }
+    }
+  },
+  {
+    "variant": "without_cooldown",
+    "path": "./APlus_Study/experiments/reference_ablations/without_cooldown.py",
+    "sha256": "73ff56eb67ba77e9e80392335c6dc3760a97e5ff1088884812eafb108982cb25",
+    "score": {
+      "score": 131.97,
+      "ratios": {
+        "goodput": 0.9986,
+        "deadline_delivery": 0.9838,
+        "outage": 1.1405,
+        "rlf": 1.8746,
+        "ho_failure": 1.8746,
+        "ping_pong": 6.2779,
+        "ho_attempts": 2.1087
+      },
+      "weights": {
+        "goodput": 0.3,
+        "deadline_delivery": 0.2,
+        "outage": 0.2,
+        "rlf": 0.15,
+        "ho_failure": 0.05,
+        "ping_pong": 0.05,
+        "ho_attempts": 0.05
+      },
+      "components": {
+        "goodput": {
+          "direction": "higher",
+          "normalized_weight": 0.3,
+          "weighted_log_contribution": -0.0004230354828009587,
+          "score_factor": 0.9995770539840926,
+          "effect": "regression"
+        },
+        "deadline_delivery": {
+          "direction": "higher",
+          "normalized_weight": 0.2,
+          "weighted_log_contribution": -0.003264089459340622,
+          "score_factor": 0.9967412318892982,
+          "effect": "regression"
+        },
+        "outage": {
+          "direction": "lower",
+          "normalized_weight": 0.2,
+          "weighted_log_contribution": 0.02628655725102297,
+          "score_factor": 1.0266350960572976,
+          "effect": "gain"
+        },
+        "rlf": {
+          "direction": "lower",
+          "normalized_weight": 0.15,
+          "weighted_log_contribution": 0.09426290476541732,
+          "score_factor": 1.0988486004784275,
+          "effect": "gain"
+        },
+        "ho_failure": {
+          "direction": "lower",
+          "normalized_weight": 0.05,
+          "weighted_log_contribution": 0.03142096825513911,
+          "score_factor": 1.0319198179490978,
+          "effect": "gain"
+        },
+        "ping_pong": {
+          "direction": "lower",
+          "normalized_weight": 0.05,
+          "weighted_log_contribution": 0.09185177825573405,
+          "score_factor": 1.0962023290173364,
+          "effect": "gain"
+        },
+        "ho_attempts": {
+          "direction": "lower",
+          "normalized_weight": 0.05,
+          "weighted_log_contribution": 0.03730413852052016,
+          "score_factor": 1.0380086712565613,
+          "effect": "gain"
+        }
+      }
+    },
+    "metrics": {
+      "per_scenario": [
+        {
+          "scenario_id": "practice-seed1",
+          "num_ues": 54,
+          "ho_attempts": 18,
+          "ho_completed": 17,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 1,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.010251903925014646,
+          "ho_interruption_fraction": 0.00497949619214997,
+          "radio_outage_fraction": 0.005272407732864675,
+          "offered_bytes": 73234622,
+          "delivered_bytes": 72942340,
+          "goodput_ratio": 0.9960089641754415,
+          "deadline_delivery_ratio": 0.920119926337573,
+          "deadline_misses": 359,
+          "undelivered_packets": 16,
+          "remaining_backlog_bytes": 292282,
+          "delay_p50_ms": 0.6080000000001746,
+          "delay_p95_ms": 57.05999999999949,
+          "delay_p99_ms": 638.3179999999993,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 1.5817223198594024,
+          "per_mode": {
+            "pedestrian": {
+              "num_ues": 11,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "cyclist": {
+              "num_ues": 3,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.004132231404958678
+            },
+            "bus": {
+              "num_ues": 5,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.003289473684210526
+            },
+            "car": {
+              "num_ues": 20,
+              "ho_attempts": 10,
+              "ho_completed": 9,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.014388489208633094
+            },
+            "train": {
+              "num_ues": 10,
+              "ho_attempts": 6,
+              "ho_completed": 6,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.026362038664323375
+            },
+            "uav": {
+              "num_ues": 5,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed2",
+          "num_ues": 65,
+          "ho_attempts": 15,
+          "ho_completed": 14,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 1,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.006331877729257642,
+          "ho_interruption_fraction": 0.003056768558951965,
+          "radio_outage_fraction": 0.0032751091703056767,
+          "offered_bytes": 98209430,
+          "delivered_bytes": 98209430,
+          "goodput_ratio": 1.0,
+          "deadline_delivery_ratio": 0.9559137651038194,
+          "deadline_misses": 266,
+          "undelivered_packets": 0,
+          "remaining_backlog_bytes": 0,
+          "delay_p50_ms": 0.7569999999996071,
+          "delay_p95_ms": 39.1140000000014,
+          "delay_p99_ms": 336.1939999999995,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 0.982532751091703,
+          "per_mode": {
+            "uav": {
+              "num_ues": 11,
+              "ho_attempts": 4,
+              "ho_completed": 4,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.005853658536585366
+            },
+            "bus": {
+              "num_ues": 8,
+              "ho_attempts": 3,
+              "ho_completed": 2,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.0074962518740629685
+            },
+            "cyclist": {
+              "num_ues": 6,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "car": {
+              "num_ues": 19,
+              "ho_attempts": 5,
+              "ho_completed": 5,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.012333965844402278
+            },
+            "pedestrian": {
+              "num_ues": 15,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "train": {
+              "num_ues": 6,
+              "ho_attempts": 3,
+              "ho_completed": 3,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.01152073732718894
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed3",
+          "num_ues": 65,
+          "ho_attempts": 19,
+          "ho_completed": 18,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 1,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.0067039106145251395,
+          "ho_interruption_fraction": 0.003538175046554935,
+          "radio_outage_fraction": 0.003165735567970205,
+          "offered_bytes": 133863693,
+          "delivered_bytes": 133854561,
+          "goodput_ratio": 0.9999317813531411,
+          "deadline_delivery_ratio": 0.9319740043329,
+          "deadline_misses": 559,
+          "undelivered_packets": 11,
+          "remaining_backlog_bytes": 9132,
+          "delay_p50_ms": 1.066000000000713,
+          "delay_p95_ms": 72.48499999999967,
+          "delay_p99_ms": 602.880000000001,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 1.0614525139664805,
+          "per_mode": {
+            "pedestrian": {
+              "num_ues": 25,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "car": {
+              "num_ues": 21,
+              "ho_attempts": 7,
+              "ho_completed": 7,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.006516587677725118
+            },
+            "uav": {
+              "num_ues": 4,
+              "ho_attempts": 3,
+              "ho_completed": 3,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.011904761904761904
+            },
+            "train": {
+              "num_ues": 7,
+              "ho_attempts": 8,
+              "ho_completed": 7,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.03103448275862069
+            },
+            "bus": {
+              "num_ues": 3,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.007662835249042145
+            },
+            "cyclist": {
+              "num_ues": 5,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed4",
+          "num_ues": 62,
+          "ho_attempts": 15,
+          "ho_completed": 15,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 0,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.008435136707388016,
+          "ho_interruption_fraction": 0.004363001745200698,
+          "radio_outage_fraction": 0.004072134962187318,
+          "offered_bytes": 87791735,
+          "delivered_bytes": 87158527,
+          "goodput_ratio": 0.9927873848261457,
+          "deadline_delivery_ratio": 0.8976487137428142,
+          "deadline_misses": 511,
+          "undelivered_packets": 37,
+          "remaining_backlog_bytes": 633208,
+          "delay_p50_ms": 0.9279999999998836,
+          "delay_p95_ms": 146.05299999999988,
+          "delay_p99_ms": 1313.5390000000007,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 1.3089005235602094,
+          "per_mode": {
+            "bus": {
+              "num_ues": 7,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "car": {
+              "num_ues": 21,
+              "ho_attempts": 8,
+              "ho_completed": 8,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.013474494706448507
+            },
+            "pedestrian": {
+              "num_ues": 19,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "train": {
+              "num_ues": 7,
+              "ho_attempts": 5,
+              "ho_completed": 5,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.025
+            },
+            "cyclist": {
+              "num_ues": 4,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.017857142857142856
+            },
+            "uav": {
+              "num_ues": 4,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.0055248618784530384
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed5",
+          "num_ues": 60,
+          "ho_attempts": 21,
+          "ho_completed": 21,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 0,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.00847069597069597,
+          "ho_interruption_fraction": 0.004807692307692308,
+          "radio_outage_fraction": 0.003663003663003663,
+          "offered_bytes": 104285816,
+          "delivered_bytes": 103803506,
+          "goodput_ratio": 0.9953751140998887,
+          "deadline_delivery_ratio": 0.8812619637554545,
+          "deadline_misses": 765,
+          "undelivered_packets": 27,
+          "remaining_backlog_bytes": 482310,
+          "delay_p50_ms": 1.772000000000844,
+          "delay_p95_ms": 238.74499999999898,
+          "delay_p99_ms": 876.530999999999,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 1.4423076923076923,
+          "per_mode": {
+            "uav": {
+              "num_ues": 11,
+              "ho_attempts": 2,
+              "ho_completed": 2,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.002583979328165375
+            },
+            "cyclist": {
+              "num_ues": 3,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.004975124378109453
+            },
+            "car": {
+              "num_ues": 19,
+              "ho_attempts": 8,
+              "ho_completed": 8,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.008614501076812634
+            },
+            "pedestrian": {
+              "num_ues": 14,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0009689922480620155
+            },
+            "train": {
+              "num_ues": 8,
+              "ho_attempts": 8,
+              "ho_completed": 8,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.02936378466557912
+            },
+            "bus": {
+              "num_ues": 5,
+              "ho_attempts": 2,
+              "ho_completed": 2,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.008450704225352112
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed6",
+          "num_ues": 53,
+          "ho_attempts": 13,
+          "ho_completed": 13,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 0,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.00839030453697949,
+          "ho_interruption_fraction": 0.004039776258545681,
+          "radio_outage_fraction": 0.00435052827843381,
+          "offered_bytes": 88972472,
+          "delivered_bytes": 88360545,
+          "goodput_ratio": 0.9931222884309655,
+          "deadline_delivery_ratio": 0.918837930006036,
+          "deadline_misses": 387,
+          "undelivered_packets": 39,
+          "remaining_backlog_bytes": 611927,
+          "delay_p50_ms": 1.1990000000005239,
+          "delay_p95_ms": 77.24200000000019,
+          "delay_p99_ms": 796.4130000000005,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 1.2119328775637042,
+          "per_mode": {
+            "train": {
+              "num_ues": 4,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.010471204188481676
+            },
+            "car": {
+              "num_ues": 20,
+              "ho_attempts": 11,
+              "ho_completed": 11,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.017624521072796936
+            },
+            "pedestrian": {
+              "num_ues": 14,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "bus": {
+              "num_ues": 7,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "cyclist": {
+              "num_ues": 3,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "uav": {
+              "num_ues": 5,
+              "ho_attempts": 2,
+              "ho_completed": 2,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.005571030640668524
+            }
+          }
+        }
+      ],
+      "aggregate": {
+        "ho_success_rate": 1.0,
+        "ho_failure_rate": 0.0,
+        "outage_fraction": 0.008097304913976817,
+        "ho_interruption_fraction": 0.004130818351515926,
+        "radio_outage_fraction": 0.003966486562460891,
+        "goodput_ratio": 0.9962042554809304,
+        "deadline_delivery_ratio": 0.9176260505464328,
+        "delay_p50_ms": 1.055000000000291,
+        "delay_p95_ms": 105.11649999999993,
+        "delay_p99_ms": 760.6458333333334,
+        "ho_failures_per_ue_min": 0.0,
+        "rlf_per_ue_min": 0.0,
+        "ping_pong_per_ue_min": 0.0,
+        "ho_attempts_per_ue_min": 1.2648081130581985,
+        "ping_pong_rate_per_completed_ho": 0.0,
+        "ho_attempts": 101,
+        "ho_completed": 98,
+        "ho_failed": 0,
+        "ho_ongoing_at_end": 3,
+        "rlf_events": 0,
+        "ping_pong_events": 0,
+        "deadline_misses": 2847,
+        "undelivered_packets": 130,
+        "num_scenarios": 6
+      }
+    }
+  },
+  {
+    "variant": "without_emergency_relaxation",
+    "path": "./APlus_Study/experiments/reference_ablations/without_emergency_relaxation.py",
+    "sha256": "899dc48c1cde6cf21053c1f37a73f92090921bf7f51cc743d9ae40b2e79f1c43",
+    "score": {
+      "score": 124.4,
+      "ratios": {
+        "goodput": 0.9986,
+        "deadline_delivery": 0.9833,
+        "outage": 1.113,
+        "rlf": 1.4302,
+        "ho_failure": 1.4302,
+        "ping_pong": 6.2779,
+        "ho_attempts": 2.1087
+      },
+      "weights": {
+        "goodput": 0.3,
+        "deadline_delivery": 0.2,
+        "outage": 0.2,
+        "rlf": 0.15,
+        "ho_failure": 0.05,
+        "ping_pong": 0.05,
+        "ho_attempts": 0.05
+      },
+      "components": {
+        "goodput": {
+          "direction": "higher",
+          "normalized_weight": 0.3,
+          "weighted_log_contribution": -0.00040776835878185755,
+          "score_factor": 0.9995923147674363,
+          "effect": "regression"
+        },
+        "deadline_delivery": {
+          "direction": "higher",
+          "normalized_weight": 0.2,
+          "weighted_log_contribution": -0.003363467429586561,
+          "score_factor": 0.9966421826905483,
+          "effect": "regression"
+        },
+        "outage": {
+          "direction": "lower",
+          "normalized_weight": 0.2,
+          "weighted_log_contribution": 0.021404629222505786,
+          "score_factor": 1.0216353515332572,
+          "effect": "gain"
+        },
+        "rlf": {
+          "direction": "lower",
+          "normalized_weight": 0.15,
+          "weighted_log_contribution": 0.05367274974245863,
+          "score_factor": 1.0551392510583935,
+          "effect": "gain"
+        },
+        "ho_failure": {
+          "direction": "lower",
+          "normalized_weight": 0.05,
+          "weighted_log_contribution": 0.017890916580819545,
+          "score_factor": 1.0180519177484846,
+          "effect": "gain"
+        },
+        "ping_pong": {
+          "direction": "lower",
+          "normalized_weight": 0.05,
+          "weighted_log_contribution": 0.09185177825573405,
+          "score_factor": 1.0962023290173364,
+          "effect": "gain"
+        },
+        "ho_attempts": {
+          "direction": "lower",
+          "normalized_weight": 0.05,
+          "weighted_log_contribution": 0.03730413852052016,
+          "score_factor": 1.0380086712565613,
+          "effect": "gain"
+        }
+      }
+    },
+    "metrics": {
+      "per_scenario": [
+        {
+          "scenario_id": "practice-seed1",
+          "num_ues": 54,
+          "ho_attempts": 18,
+          "ho_completed": 17,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 1,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.010251903925014646,
+          "ho_interruption_fraction": 0.00497949619214997,
+          "radio_outage_fraction": 0.005272407732864675,
+          "offered_bytes": 73234622,
+          "delivered_bytes": 72942340,
+          "goodput_ratio": 0.9960089641754415,
+          "deadline_delivery_ratio": 0.920119926337573,
+          "deadline_misses": 359,
+          "undelivered_packets": 16,
+          "remaining_backlog_bytes": 292282,
+          "delay_p50_ms": 0.6080000000001746,
+          "delay_p95_ms": 57.05999999999949,
+          "delay_p99_ms": 638.3179999999993,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 1.5817223198594024,
+          "per_mode": {
+            "pedestrian": {
+              "num_ues": 11,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "cyclist": {
+              "num_ues": 3,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.004132231404958678
+            },
+            "bus": {
+              "num_ues": 5,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.003289473684210526
+            },
+            "car": {
+              "num_ues": 20,
+              "ho_attempts": 10,
+              "ho_completed": 9,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.014388489208633094
+            },
+            "train": {
+              "num_ues": 10,
+              "ho_attempts": 6,
+              "ho_completed": 6,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.026362038664323375
+            },
+            "uav": {
+              "num_ues": 5,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed2",
+          "num_ues": 65,
+          "ho_attempts": 15,
+          "ho_completed": 14,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 1,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.006768558951965066,
+          "ho_interruption_fraction": 0.003056768558951965,
+          "radio_outage_fraction": 0.0037117903930131003,
+          "offered_bytes": 98209430,
+          "delivered_bytes": 98209430,
+          "goodput_ratio": 1.0,
+          "deadline_delivery_ratio": 0.9556803761105221,
+          "deadline_misses": 273,
+          "undelivered_packets": 0,
+          "remaining_backlog_bytes": 0,
+          "delay_p50_ms": 0.7569999999996071,
+          "delay_p95_ms": 39.82999999999993,
+          "delay_p99_ms": 340.53199999999924,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 0.982532751091703,
+          "per_mode": {
+            "uav": {
+              "num_ues": 11,
+              "ho_attempts": 4,
+              "ho_completed": 4,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.005853658536585366
+            },
+            "bus": {
+              "num_ues": 8,
+              "ho_attempts": 3,
+              "ho_completed": 2,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.0074962518740629685
+            },
+            "cyclist": {
+              "num_ues": 6,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "car": {
+              "num_ues": 19,
+              "ho_attempts": 5,
+              "ho_completed": 5,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.014231499051233396
+            },
+            "pedestrian": {
+              "num_ues": 15,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "train": {
+              "num_ues": 6,
+              "ho_attempts": 3,
+              "ho_completed": 3,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.01152073732718894
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed3",
+          "num_ues": 65,
+          "ho_attempts": 19,
+          "ho_completed": 18,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 1,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.0067039106145251395,
+          "ho_interruption_fraction": 0.003538175046554935,
+          "radio_outage_fraction": 0.003165735567970205,
+          "offered_bytes": 133863693,
+          "delivered_bytes": 133854561,
+          "goodput_ratio": 0.9999317813531411,
+          "deadline_delivery_ratio": 0.9319740043329,
+          "deadline_misses": 559,
+          "undelivered_packets": 11,
+          "remaining_backlog_bytes": 9132,
+          "delay_p50_ms": 1.066000000000713,
+          "delay_p95_ms": 72.48499999999967,
+          "delay_p99_ms": 602.880000000001,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 1.0614525139664805,
+          "per_mode": {
+            "pedestrian": {
+              "num_ues": 25,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "car": {
+              "num_ues": 21,
+              "ho_attempts": 7,
+              "ho_completed": 7,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.006516587677725118
+            },
+            "uav": {
+              "num_ues": 4,
+              "ho_attempts": 3,
+              "ho_completed": 3,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.011904761904761904
+            },
+            "train": {
+              "num_ues": 7,
+              "ho_attempts": 8,
+              "ho_completed": 7,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.03103448275862069
+            },
+            "bus": {
+              "num_ues": 3,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.007662835249042145
+            },
+            "cyclist": {
+              "num_ues": 5,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed4",
+          "num_ues": 62,
+          "ho_attempts": 15,
+          "ho_completed": 15,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 0,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.008435136707388016,
+          "ho_interruption_fraction": 0.004363001745200698,
+          "radio_outage_fraction": 0.004072134962187318,
+          "offered_bytes": 87791735,
+          "delivered_bytes": 87158527,
+          "goodput_ratio": 0.9927873848261457,
+          "deadline_delivery_ratio": 0.8976487137428142,
+          "deadline_misses": 511,
+          "undelivered_packets": 37,
+          "remaining_backlog_bytes": 633208,
+          "delay_p50_ms": 0.9279999999998836,
+          "delay_p95_ms": 146.05299999999988,
+          "delay_p99_ms": 1313.5390000000007,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 1.3089005235602094,
+          "per_mode": {
+            "bus": {
+              "num_ues": 7,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "car": {
+              "num_ues": 21,
+              "ho_attempts": 8,
+              "ho_completed": 8,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.013474494706448507
+            },
+            "pedestrian": {
+              "num_ues": 19,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "train": {
+              "num_ues": 7,
+              "ho_attempts": 5,
+              "ho_completed": 5,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.025
+            },
+            "cyclist": {
+              "num_ues": 4,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.017857142857142856
+            },
+            "uav": {
+              "num_ues": 4,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.0055248618784530384
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed5",
+          "num_ues": 60,
+          "ho_attempts": 21,
+          "ho_completed": 21,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 0,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.00847069597069597,
+          "ho_interruption_fraction": 0.004807692307692308,
+          "radio_outage_fraction": 0.003663003663003663,
+          "offered_bytes": 104285816,
+          "delivered_bytes": 103803506,
+          "goodput_ratio": 0.9953751140998887,
+          "deadline_delivery_ratio": 0.8812619637554545,
+          "deadline_misses": 765,
+          "undelivered_packets": 27,
+          "remaining_backlog_bytes": 482310,
+          "delay_p50_ms": 1.772000000000844,
+          "delay_p95_ms": 238.74499999999898,
+          "delay_p99_ms": 876.530999999999,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 1.4423076923076923,
+          "per_mode": {
+            "uav": {
+              "num_ues": 11,
+              "ho_attempts": 2,
+              "ho_completed": 2,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.002583979328165375
+            },
+            "cyclist": {
+              "num_ues": 3,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.004975124378109453
+            },
+            "car": {
+              "num_ues": 19,
+              "ho_attempts": 8,
+              "ho_completed": 8,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.008614501076812634
+            },
+            "pedestrian": {
+              "num_ues": 14,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0009689922480620155
+            },
+            "train": {
+              "num_ues": 8,
+              "ho_attempts": 8,
+              "ho_completed": 8,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.02936378466557912
+            },
+            "bus": {
+              "num_ues": 5,
+              "ho_attempts": 2,
+              "ho_completed": 2,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.008450704225352112
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed6",
+          "num_ues": 53,
+          "ho_attempts": 13,
+          "ho_completed": 12,
+          "ho_failed": 1,
+          "ho_ongoing_at_end": 0,
+          "ho_success_rate": 0.9230769230769231,
+          "ho_failure_rate": 0.07692307692307693,
+          "rlf_events": 1,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.012119328775637041,
+          "ho_interruption_fraction": 0.0037290242386575512,
+          "radio_outage_fraction": 0.006836544437538844,
+          "offered_bytes": 88972472,
+          "delivered_bytes": 88388153,
+          "goodput_ratio": 0.993432586654443,
+          "deadline_delivery_ratio": 0.9162766321700042,
+          "deadline_misses": 407,
+          "undelivered_packets": 37,
+          "remaining_backlog_bytes": 584319,
+          "delay_p50_ms": 1.1980000000003201,
+          "delay_p95_ms": 81.33699999999953,
+          "delay_p99_ms": 857.3040000000001,
+          "ho_failures_per_ue_min": 0.09322560596643878,
+          "rlf_per_ue_min": 0.09322560596643878,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 1.2119328775637042,
+          "per_mode": {
+            "train": {
+              "num_ues": 4,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.010471204188481676
+            },
+            "car": {
+              "num_ues": 20,
+              "ho_attempts": 11,
+              "ho_completed": 10,
+              "ho_failed": 1,
+              "ho_success_rate": 0.9090909090909091,
+              "outage_fraction": 0.02681992337164751
+            },
+            "pedestrian": {
+              "num_ues": 14,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "bus": {
+              "num_ues": 7,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "cyclist": {
+              "num_ues": 3,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "uav": {
+              "num_ues": 5,
+              "ho_attempts": 2,
+              "ho_completed": 2,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.005571030640668524
+            }
+          }
+        }
+      ],
+      "aggregate": {
+        "ho_success_rate": 0.9871794871794872,
+        "ho_failure_rate": 0.012820512820512822,
+        "outage_fraction": 0.008791589157537647,
+        "ho_interruption_fraction": 0.004079026348201238,
+        "radio_outage_fraction": 0.004453602792762967,
+        "goodput_ratio": 0.99625597185151,
+        "deadline_delivery_ratio": 0.9171602694082113,
+        "delay_p50_ms": 1.0548333333335904,
+        "delay_p95_ms": 105.91833333333291,
+        "delay_p99_ms": 771.5173333333332,
+        "ho_failures_per_ue_min": 0.015537600994406464,
+        "rlf_per_ue_min": 0.015537600994406464,
+        "ping_pong_per_ue_min": 0.0,
+        "ho_attempts_per_ue_min": 1.2648081130581985,
+        "ping_pong_rate_per_completed_ho": 0.0,
+        "ho_attempts": 101,
+        "ho_completed": 97,
+        "ho_failed": 1,
+        "ho_ongoing_at_end": 3,
+        "rlf_events": 1,
+        "ping_pong_events": 0,
+        "deadline_misses": 2874,
+        "undelivered_packets": 128,
+        "num_scenarios": 6
+      }
+    }
+  }
+]

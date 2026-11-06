@@ -1,0 +1,10 @@
+{
+  "candidate": "./APlus_Study/submission/algorithm.py",
+  "sha256": "63ce1efe2435389fe0b07f07f8f7c633b011415ea2b81bb173e75d899f1a8321",
+  "frozen_at": "2026-10-23T20:16:59.270128+08:00",
+  "selection": "Training-only controlled ablation removed source-variance trigger: 131.97 vs 131.62. No tuning on holdout outcomes.",
+  "holdout_status": "V09 has already been evaluated on seeds 7-10. V10 evaluation on the same subset is a reused holdout, NOT a new blind test. Preserve the first-blind V09 result separately.",
+  "first_blind_freeze": "FREEZE_V09.json",
+  "first_blind_validation_index": 115.27,
+  "target_not_achieved": true
+}

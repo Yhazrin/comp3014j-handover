@@ -1,0 +1,12 @@
+{
+  "label": "RELEASE_REPRODUCTION",
+  "command": [
+    "APlus_Study/reproduce.sh",
+    "./APlus_Study/experiments/release_reproduction"
+  ],
+  "cwd": "~/Desktop/Performance of Comp Systems",
+  "stdout": "Evaluated ./APlus_Study/submission/algorithm.py on 10 scenario(s).\n  Score is a composite index relative to A3 (baseline = 100.0).\n  No imposed cap; each fixed suite has a finite mathematical upper bound.\n  Your score:  126.13\n  A3 baseline: 100.0 (reference)\n  Never hand over: 84.93 (comparison reference)\n  Delta:       +26.13\nReport:    ./APlus_Study/experiments/release_reproduction/results.json\nDashboard: ./APlus_Study/experiments/release_reproduction/dashboard.html\n",
+  "stderr": "",
+  "exit_status": 0,
+  "wall_seconds": 8.448040962219238
+}

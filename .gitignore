@@ -1,0 +1,16 @@
+# Local environments and generated files
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+.env.*
+reproduced-*/
+evidence/report_preview*/
+evidence/report_metadata.json
+# Course-provided inputs stay local
+COMP3014J Assignment/
+handover-bench/
+data/
+suites/
+*.zip

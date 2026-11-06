@@ -1,0 +1,361 @@
+{
+  "scope": "Public practice seeds 1-10, original fixed configuration only. Not a bound on private assessment.",
+  "coordinate_order": [
+    "outage_fraction",
+    "ho_attempts_per_ue_min",
+    "rlf_per_ue_min"
+  ],
+  "constraints": [
+    {
+      "weights_integer": [
+        1000000,
+        1000,
+        100000
+      ],
+      "weights_scale": 1000000,
+      "exact_lower_bound": "3297609167701419458467049/734587640805860333469432000",
+      "printed_lower_bound": "224453/50000000",
+      "printed_lower_bound_decimal": "0.00448906",
+      "scenario_costs": [
+        {
+          "scenario": "practice-seed1",
+          "active_steps": 3414,
+          "integer_minimum": 19300000,
+          "normalizer": 34140000000
+        },
+        {
+          "scenario": "practice-seed2",
+          "active_steps": 4580,
+          "integer_minimum": 18900000,
+          "normalizer": 45800000000
+        },
+        {
+          "scenario": "practice-seed3",
+          "active_steps": 5370,
+          "integer_minimum": 22800000,
+          "normalizer": 53700000000
+        },
+        {
+          "scenario": "practice-seed4",
+          "active_steps": 3438,
+          "integer_minimum": 18200000,
+          "normalizer": 34380000000
+        },
+        {
+          "scenario": "practice-seed5",
+          "active_steps": 4368,
+          "integer_minimum": 25100000,
+          "normalizer": 43680000000
+        },
+        {
+          "scenario": "practice-seed6",
+          "active_steps": 3218,
+          "integer_minimum": 17300000,
+          "normalizer": 32180000000
+        },
+        {
+          "scenario": "practice-seed7",
+          "active_steps": 4074,
+          "integer_minimum": 12700000,
+          "normalizer": 40740000000
+        },
+        {
+          "scenario": "practice-seed8",
+          "active_steps": 3772,
+          "integer_minimum": 17900000,
+          "normalizer": 37720000000
+        },
+        {
+          "scenario": "practice-seed9",
+          "active_steps": 3629,
+          "integer_minimum": 11100000,
+          "normalizer": 36290000000
+        },
+        {
+          "scenario": "practice-seed10",
+          "active_steps": 4536,
+          "integer_minimum": 16000000,
+          "normalizer": 45360000000
+        }
+      ]
+    },
+    {
+      "weights_integer": [
+        1000000,
+        100000,
+        100000
+      ],
+      "weights_scale": 1000000,
+      "exact_lower_bound": "181006750458132693002989/3498036384789811111759200",
+      "printed_lower_bound": "1293631/25000000",
+      "printed_lower_bound_decimal": "0.05174524",
+      "scenario_costs": [
+        {
+          "scenario": "practice-seed1",
+          "active_steps": 3414,
+          "integer_minimum": 193000000,
+          "normalizer": 34140000000
+        },
+        {
+          "scenario": "practice-seed2",
+          "active_steps": 4580,
+          "integer_minimum": 285000000,
+          "normalizer": 45800000000
+        },
+        {
+          "scenario": "practice-seed3",
+          "active_steps": 5370,
+          "integer_minimum": 294000000,
+          "normalizer": 53700000000
+        },
+        {
+          "scenario": "practice-seed4",
+          "active_steps": 3438,
+          "integer_minimum": 205000000,
+          "normalizer": 34380000000
+        },
+        {
+          "scenario": "practice-seed5",
+          "active_steps": 4368,
+          "integer_minimum": 305000000,
+          "normalizer": 43680000000
+        },
+        {
+          "scenario": "practice-seed6",
+          "active_steps": 3218,
+          "integer_minimum": 194000000,
+          "normalizer": 32180000000
+        },
+        {
+          "scenario": "practice-seed7",
+          "active_steps": 4074,
+          "integer_minimum": 126000000,
+          "normalizer": 40740000000
+        },
+        {
+          "scenario": "practice-seed8",
+          "active_steps": 3772,
+          "integer_minimum": 233000000,
+          "normalizer": 37720000000
+        },
+        {
+          "scenario": "practice-seed9",
+          "active_steps": 3629,
+          "integer_minimum": 96000000,
+          "normalizer": 36290000000
+        },
+        {
+          "scenario": "practice-seed10",
+          "active_steps": 4536,
+          "integer_minimum": 159000000,
+          "normalizer": 45360000000
+        }
+      ]
+    },
+    {
+      "weights_integer": [
+        1000000,
+        14089,
+        414918
+      ],
+      "weights_scale": 1000000,
+      "exact_lower_bound": "11124107928695585405321056339/734587640805860333469432000000",
+      "printed_lower_bound": "1514333/100000000",
+      "printed_lower_bound_decimal": "0.01514333",
+      "scenario_costs": [
+        {
+          "scenario": "practice-seed1",
+          "active_steps": 3414,
+          "integer_minimum": 59267000,
+          "normalizer": 34140000000
+        },
+        {
+          "scenario": "practice-seed2",
+          "active_steps": 4580,
+          "integer_minimum": 67493700,
+          "normalizer": 45800000000
+        },
+        {
+          "scenario": "practice-seed3",
+          "active_steps": 5370,
+          "integer_minimum": 76947100,
+          "normalizer": 53700000000
+        },
+        {
+          "scenario": "practice-seed4",
+          "active_steps": 3438,
+          "integer_minimum": 63267000,
+          "normalizer": 34380000000
+        },
+        {
+          "scenario": "practice-seed5",
+          "active_steps": 4368,
+          "integer_minimum": 88400500,
+          "normalizer": 43680000000
+        },
+        {
+          "scenario": "practice-seed6",
+          "active_steps": 3218,
+          "integer_minimum": 60493700,
+          "normalizer": 32180000000
+        },
+        {
+          "scenario": "practice-seed7",
+          "active_steps": 4074,
+          "integer_minimum": 44360200,
+          "normalizer": 40740000000
+        },
+        {
+          "scenario": "practice-seed8",
+          "active_steps": 3772,
+          "integer_minimum": 62040300,
+          "normalizer": 37720000000
+        },
+        {
+          "scenario": "practice-seed9",
+          "active_steps": 3629,
+          "integer_minimum": 37133500,
+          "normalizer": 36290000000
+        },
+        {
+          "scenario": "practice-seed10",
+          "active_steps": 4536,
+          "integer_minimum": 45360200,
+          "normalizer": 45360000000
+        }
+      ]
+    }
+  ],
+  "box": [
+    1,
+    300,
+    300
+  ],
+  "vertex_count": 14,
+  "vertices": [
+    {
+      "coordinates": [
+        "2405151817/654450000000",
+        "1065427/1308900",
+        "0"
+      ],
+      "ideal_index_decimal80": "134.11714448573827218747282945323825958021892940863467892634262912287441672706756"
+    },
+    {
+      "coordinates": [
+        "15426025231/5904712500000",
+        "787603/1650000",
+        "2423536611/173204900000"
+      ],
+      "ideal_index_decimal80": "133.69655555256810752298900927893466929856944648186975960480196698934822595036696"
+    },
+    {
+      "coordinates": [
+        "19632357841/2147775000000",
+        "3660191/8591100",
+        "0"
+      ],
+      "ideal_index_decimal80": "132.55169186644035101530473119345487239144420855216914298666778532463892988382836"
+    },
+    {
+      "coordinates": [
+        "0",
+        "787603/1650000",
+        "3309673/82500000"
+      ],
+      "ideal_index_decimal80": "130.16130414307403515280149648294135928040897499671402626994639300493106208347410"
+    },
+    {
+      "coordinates": [
+        "0",
+        "224453/50000",
+        "0"
+      ],
+      "ideal_index_decimal80": "127.67727913180724952652385544764109758294417832699151350460178660608568885717349"
+    },
+    {
+      "coordinates": [
+        "1293631/25000000",
+        "0",
+        "0"
+      ],
+      "ideal_index_decimal80": "123.89700141873146174665015019275262973497591625638093339886532900699065458084010"
+    },
+    {
+      "coordinates": [
+        "0",
+        "0",
+        "1293631/2500000"
+      ],
+      "ideal_index_decimal80": "111.11418370832308528541044795207719902137845140290792810574401001555050618067778"
+    },
+    {
+      "coordinates": [
+        "0",
+        "300",
+        "0"
+      ],
+      "ideal_index_decimal80": "103.53858696601382972832104499491917789363221490967677829910166579350971375425991"
+    },
+    {
+      "coordinates": [
+        "1",
+        "0",
+        "0"
+      ],
+      "ideal_index_decimal80": "72.861713401504210804296534588960937391019283772744288547971348874977290035465940"
+    },
+    {
+      "coordinates": [
+        "1",
+        "300",
+        "0"
+      ],
+      "ideal_index_decimal80": "47.161563942956152581364798949625893454821994240323967630713822571004216271845174"
+    },
+    {
+      "coordinates": [
+        "0",
+        "0",
+        "300"
+      ],
+      "ideal_index_decimal80": "43.379033446020292157487156257393466676551515745683505147474696365312409396946361"
+    },
+    {
+      "coordinates": [
+        "0",
+        "300",
+        "300"
+      ],
+      "ideal_index_decimal80": "28.078162921788826788550662870849316076913211381076843308677418297414709833519537"
+    },
+    {
+      "coordinates": [
+        "1",
+        "0",
+        "300"
+      ],
+      "ideal_index_decimal80": "19.759039789867459554230626559851226824294028922895523182992215559227177412369113"
+    },
+    {
+      "coordinates": [
+        "1",
+        "300",
+        "300"
+      ],
+      "ideal_index_decimal80": "12.789532046360179914274240866918626036179334460000615631181394698795255676720986"
+    }
+  ],
+  "maximum_ideal_index_decimal80": "134.11714448573827218747282945323825958021892940863467892634262912287441672706756",
+  "maximizing_vertex": [
+    "2405151817/654450000000",
+    "1065427/1308900",
+    "0"
+  ],
+  "conservative_two_decimal_upper_bound": "134.12",
+  "max_float_scorer_discrepancy": 2.842170943040401e-14,
+  "integer_costs_and_vertices_are_exact": true,
+  "transcendental_evaluation": "80-digit Decimal, cross-checked at every rational vertex against public float scorer; display includes 1e-6 upward allowance.",
+  "private_grade": "unknown",
+  "relaxation_proof": "See SCORE_BOUND_NOTE.md; every legal path is dominated componentwise in nonnegative weighted cost by an allowed relaxed path. Perfect goodput/deadline and zero HO-failure/ping-pong enlarge the score. Convexity of negative logarithms reduces the outer-polytope maximum to exact rational vertices."
+}

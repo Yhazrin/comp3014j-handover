@@ -1,0 +1,1872 @@
+{
+  "status": "valid",
+  "algorithm_path": "./APlus_Study/submission/algorithm.py",
+  "data_dir": "./APlus_Study/suites/validation",
+  "scenario_ids": [
+    "practice-seed10",
+    "practice-seed7",
+    "practice-seed8",
+    "practice-seed9"
+  ],
+  "student": {
+    "status": "valid",
+    "metrics": {
+      "per_scenario": [
+        {
+          "scenario_id": "practice-seed10",
+          "num_ues": 64,
+          "ho_attempts": 15,
+          "ho_completed": 15,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 0,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.005731922398589065,
+          "ho_interruption_fraction": 0.0033068783068783067,
+          "radio_outage_fraction": 0.0024250440917107582,
+          "offered_bytes": 95573698,
+          "delivered_bytes": 95281343,
+          "goodput_ratio": 0.9969410517106914,
+          "deadline_delivery_ratio": 0.91923075949201,
+          "deadline_misses": 458,
+          "undelivered_packets": 18,
+          "remaining_backlog_bytes": 292355,
+          "delay_p50_ms": 0.47300000000177533,
+          "delay_p95_ms": 75.62900000000081,
+          "delay_p99_ms": 583.7019999999993,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 0.9920634920634921,
+          "per_mode": {
+            "pedestrian": {
+              "num_ues": 18,
+              "ho_attempts": 2,
+              "ho_completed": 2,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.0024875621890547263
+            },
+            "cyclist": {
+              "num_ues": 4,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.0056179775280898875
+            },
+            "car": {
+              "num_ues": 20,
+              "ho_attempts": 6,
+              "ho_completed": 6,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.005039596832253419
+            },
+            "uav": {
+              "num_ues": 11,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.00141643059490085
+            },
+            "bus": {
+              "num_ues": 6,
+              "ho_attempts": 4,
+              "ho_completed": 4,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.01276595744680851
+            },
+            "train": {
+              "num_ues": 5,
+              "ho_attempts": 2,
+              "ho_completed": 2,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.017114914425427872
+            }
+          },
+          "score": {
+            "score": 116.88,
+            "ratios": {
+              "goodput": 1.0002,
+              "deadline_delivery": 0.9774,
+              "outage": 1.1714,
+              "rlf": 1.0,
+              "ho_failure": 1.0,
+              "ping_pong": 4.9683,
+              "ho_attempts": 2.6502
+            },
+            "weights": {
+              "goodput": 0.3,
+              "deadline_delivery": 0.2,
+              "outage": 0.2,
+              "rlf": 0.15,
+              "ho_failure": 0.05,
+              "ping_pong": 0.05,
+              "ho_attempts": 0.05
+            },
+            "components": {
+              "goodput": {
+                "direction": "higher",
+                "normalized_weight": 0.3,
+                "weighted_log_contribution": 7.331066995702501e-05,
+                "score_factor": 1.00007331335725,
+                "effect": "gain"
+              },
+              "deadline_delivery": {
+                "direction": "higher",
+                "normalized_weight": 0.2,
+                "weighted_log_contribution": -0.004571388438387263,
+                "score_factor": 0.9954390444540844,
+                "effect": "regression"
+              },
+              "outage": {
+                "direction": "lower",
+                "normalized_weight": 0.2,
+                "weighted_log_contribution": 0.031631426918561065,
+                "score_factor": 1.0321370172696795,
+                "effect": "gain"
+              },
+              "rlf": {
+                "direction": "lower",
+                "normalized_weight": 0.15,
+                "weighted_log_contribution": 0.0,
+                "score_factor": 1.0,
+                "effect": "unchanged"
+              },
+              "ho_failure": {
+                "direction": "lower",
+                "normalized_weight": 0.05,
+                "weighted_log_contribution": 0.0,
+                "score_factor": 1.0,
+                "effect": "unchanged"
+              },
+              "ping_pong": {
+                "direction": "lower",
+                "normalized_weight": 0.05,
+                "weighted_log_contribution": 0.08015342320743103,
+                "score_factor": 1.083453281801676,
+                "effect": "gain"
+              },
+              "ho_attempts": {
+                "direction": "lower",
+                "normalized_weight": 0.05,
+                "weighted_log_contribution": 0.048731095421869625,
+                "score_factor": 1.0499379796468098,
+                "effect": "gain"
+              }
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed7",
+          "num_ues": 69,
+          "ho_attempts": 11,
+          "ho_completed": 10,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 1,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.003436426116838488,
+          "ho_interruption_fraction": 0.002454590083456063,
+          "radio_outage_fraction": 0.0009818360333824251,
+          "offered_bytes": 100166235,
+          "delivered_bytes": 99782911,
+          "goodput_ratio": 0.9961731216112895,
+          "deadline_delivery_ratio": 0.8725996339984228,
+          "deadline_misses": 719,
+          "undelivered_packets": 22,
+          "remaining_backlog_bytes": 383324,
+          "delay_p50_ms": 0.5300000000006548,
+          "delay_p95_ms": 197.65399999999863,
+          "delay_p99_ms": 734.8950000000004,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 0.8100147275405007,
+          "per_mode": {
+            "cyclist": {
+              "num_ues": 3,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "pedestrian": {
+              "num_ues": 15,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "car": {
+              "num_ues": 22,
+              "ho_attempts": 5,
+              "ho_completed": 4,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.004889975550122249
+            },
+            "bus": {
+              "num_ues": 8,
+              "ho_attempts": 2,
+              "ho_completed": 2,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.005434782608695652
+            },
+            "train": {
+              "num_ues": 7,
+              "ho_attempts": 2,
+              "ho_completed": 2,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.008695652173913044
+            },
+            "uav": {
+              "num_ues": 14,
+              "ho_attempts": 2,
+              "ho_completed": 2,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.0025575447570332483
+            }
+          },
+          "score": {
+            "score": 122.75,
+            "ratios": {
+              "goodput": 1.0005,
+              "deadline_delivery": 1.0149,
+              "outage": 1.2723,
+              "rlf": 1.0,
+              "ho_failure": 1.0,
+              "ping_pong": 6.891,
+              "ho_attempts": 3.1406
+            },
+            "weights": {
+              "goodput": 0.3,
+              "deadline_delivery": 0.2,
+              "outage": 0.2,
+              "rlf": 0.15,
+              "ho_failure": 0.05,
+              "ping_pong": 0.05,
+              "ho_attempts": 0.05
+            },
+            "components": {
+              "goodput": {
+                "direction": "higher",
+                "normalized_weight": 0.3,
+                "weighted_log_contribution": 0.00014615948157704808,
+                "score_factor": 1.0001461701633945,
+                "effect": "gain"
+              },
+              "deadline_delivery": {
+                "direction": "higher",
+                "normalized_weight": 0.2,
+                "weighted_log_contribution": 0.0029523160915290877,
+                "score_factor": 1.0029566784686637,
+                "effect": "gain"
+              },
+              "outage": {
+                "direction": "lower",
+                "normalized_weight": 0.2,
+                "weighted_log_contribution": 0.04816656774138374,
+                "score_factor": 1.0493454278661838,
+                "effect": "gain"
+              },
+              "rlf": {
+                "direction": "lower",
+                "normalized_weight": 0.15,
+                "weighted_log_contribution": 0.0,
+                "score_factor": 1.0,
+                "effect": "unchanged"
+              },
+              "ho_failure": {
+                "direction": "lower",
+                "normalized_weight": 0.05,
+                "weighted_log_contribution": 0.0,
+                "score_factor": 1.0,
+                "effect": "unchanged"
+              },
+              "ping_pong": {
+                "direction": "lower",
+                "normalized_weight": 0.05,
+                "weighted_log_contribution": 0.09651092816537601,
+                "score_factor": 1.1013216165027893,
+                "effect": "gain"
+              },
+              "ho_attempts": {
+                "direction": "lower",
+                "normalized_weight": 0.05,
+                "weighted_log_contribution": 0.0572206013453338,
+                "score_factor": 1.058889377053131,
+                "effect": "gain"
+              }
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed8",
+          "num_ues": 62,
+          "ho_attempts": 15,
+          "ho_completed": 14,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 1,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.006097560975609756,
+          "ho_interruption_fraction": 0.003976670201484623,
+          "radio_outage_fraction": 0.0021208907741251328,
+          "offered_bytes": 109408973,
+          "delivered_bytes": 109408973,
+          "goodput_ratio": 1.0,
+          "deadline_delivery_ratio": 0.9695055815942994,
+          "deadline_misses": 237,
+          "undelivered_packets": 0,
+          "remaining_backlog_bytes": 0,
+          "delay_p50_ms": 1.6679999999996653,
+          "delay_p95_ms": 47.735999999999876,
+          "delay_p99_ms": 388.28299999999945,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 1.193001060445387,
+          "per_mode": {
+            "train": {
+              "num_ues": 5,
+              "ho_attempts": 4,
+              "ho_completed": 4,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.013054830287206266
+            },
+            "car": {
+              "num_ues": 17,
+              "ho_attempts": 9,
+              "ho_completed": 8,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.013145539906103286
+            },
+            "pedestrian": {
+              "num_ues": 17,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "bus": {
+              "num_ues": 12,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "cyclist": {
+              "num_ues": 4,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "uav": {
+              "num_ues": 7,
+              "ho_attempts": 2,
+              "ho_completed": 2,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.008016032064128256
+            }
+          },
+          "score": {
+            "score": 109.46,
+            "ratios": {
+              "goodput": 1.0,
+              "deadline_delivery": 0.9939,
+              "outage": 1.0711,
+              "rlf": 1.0,
+              "ho_failure": 1.0,
+              "ping_pong": 2.5907,
+              "ho_attempts": 1.8318
+            },
+            "weights": {
+              "goodput": 0.3,
+              "deadline_delivery": 0.2,
+              "outage": 0.2,
+              "rlf": 0.15,
+              "ho_failure": 0.05,
+              "ping_pong": 0.05,
+              "ho_attempts": 0.05
+            },
+            "components": {
+              "goodput": {
+                "direction": "higher",
+                "normalized_weight": 0.3,
+                "weighted_log_contribution": 0.0,
+                "score_factor": 1.0,
+                "effect": "unchanged"
+              },
+              "deadline_delivery": {
+                "direction": "higher",
+                "normalized_weight": 0.2,
+                "weighted_log_contribution": -0.001221040896817836,
+                "score_factor": 0.9987797042702939,
+                "effect": "regression"
+              },
+              "outage": {
+                "direction": "lower",
+                "normalized_weight": 0.2,
+                "weighted_log_contribution": 0.013738969046268394,
+                "score_factor": 1.0138337823964658,
+                "effect": "gain"
+              },
+              "rlf": {
+                "direction": "lower",
+                "normalized_weight": 0.15,
+                "weighted_log_contribution": 0.0,
+                "score_factor": 1.0,
+                "effect": "unchanged"
+              },
+              "ho_failure": {
+                "direction": "lower",
+                "normalized_weight": 0.05,
+                "weighted_log_contribution": 0.0,
+                "score_factor": 1.0,
+                "effect": "unchanged"
+              },
+              "ping_pong": {
+                "direction": "lower",
+                "normalized_weight": 0.05,
+                "weighted_log_contribution": 0.04759578943121414,
+                "score_factor": 1.048746655155576,
+                "effect": "gain"
+              },
+              "ho_attempts": {
+                "direction": "lower",
+                "normalized_weight": 0.05,
+                "weighted_log_contribution": 0.030265085603530997,
+                "score_factor": 1.030727728823975,
+                "effect": "gain"
+              }
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed9",
+          "num_ues": 53,
+          "ho_attempts": 15,
+          "ho_completed": 15,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 0,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": 0.0,
+          "outage_fraction": 0.006888950124001102,
+          "ho_interruption_fraction": 0.004133370074400662,
+          "radio_outage_fraction": 0.002755580049600441,
+          "offered_bytes": 66885493,
+          "delivered_bytes": 66885493,
+          "goodput_ratio": 1.0,
+          "deadline_delivery_ratio": 0.9781330160786884,
+          "deadline_misses": 125,
+          "undelivered_packets": 0,
+          "remaining_backlog_bytes": 0,
+          "delay_p50_ms": 0.3960000000006403,
+          "delay_p95_ms": 37.720000000001164,
+          "delay_p99_ms": 180.38300000000163,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 1.2400110223201986,
+          "per_mode": {
+            "car": {
+              "num_ues": 23,
+              "ho_attempts": 11,
+              "ho_completed": 11,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.011597938144329897
+            },
+            "pedestrian": {
+              "num_ues": 12,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.0033222591362126247
+            },
+            "uav": {
+              "num_ues": 7,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "bus": {
+              "num_ues": 2,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "cyclist": {
+              "num_ues": 7,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.002680965147453083
+            },
+            "train": {
+              "num_ues": 2,
+              "ho_attempts": 2,
+              "ho_completed": 2,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.021897810218978103
+            }
+          },
+          "score": {
+            "score": 111.28,
+            "ratios": {
+              "goodput": 1.0004,
+              "deadline_delivery": 0.9958,
+              "outage": 1.0717,
+              "rlf": 1.0,
+              "ho_failure": 1.0,
+              "ping_pong": 4.3067,
+              "ho_attempts": 1.5127
+            },
+            "weights": {
+              "goodput": 0.3,
+              "deadline_delivery": 0.2,
+              "outage": 0.2,
+              "rlf": 0.15,
+              "ho_failure": 0.05,
+              "ping_pong": 0.05,
+              "ho_attempts": 0.05
+            },
+            "components": {
+              "goodput": {
+                "direction": "higher",
+                "normalized_weight": 0.3,
+                "weighted_log_contribution": 0.00013391101994817417,
+                "score_factor": 1.000133919986429,
+                "effect": "gain"
+              },
+              "deadline_delivery": {
+                "direction": "higher",
+                "normalized_weight": 0.2,
+                "weighted_log_contribution": -0.0008341013276442416,
+                "score_factor": 0.9991662464381708,
+                "effect": "regression"
+              },
+              "outage": {
+                "direction": "lower",
+                "normalized_weight": 0.2,
+                "weighted_log_contribution": 0.013855954874458693,
+                "score_factor": 1.0139523935189216,
+                "effect": "gain"
+              },
+              "rlf": {
+                "direction": "lower",
+                "normalized_weight": 0.15,
+                "weighted_log_contribution": 0.0,
+                "score_factor": 1.0,
+                "effect": "unchanged"
+              },
+              "ho_failure": {
+                "direction": "lower",
+                "normalized_weight": 0.05,
+                "weighted_log_contribution": 0.0,
+                "score_factor": 1.0,
+                "effect": "unchanged"
+              },
+              "ping_pong": {
+                "direction": "lower",
+                "normalized_weight": 0.05,
+                "weighted_log_contribution": 0.07300855173145616,
+                "score_factor": 1.0757397363127097,
+                "effect": "gain"
+              },
+              "ho_attempts": {
+                "direction": "lower",
+                "normalized_weight": 0.05,
+                "weighted_log_contribution": 0.020693539899706126,
+                "score_factor": 1.0209091357757236,
+                "effect": "gain"
+              }
+            }
+          }
+        }
+      ],
+      "aggregate": {
+        "ho_success_rate": 1.0,
+        "ho_failure_rate": 0.0,
+        "outage_fraction": 0.005538714903759603,
+        "ho_interruption_fraction": 0.0034678771665549134,
+        "radio_outage_fraction": 0.0020708377372046895,
+        "goodput_ratio": 0.9982785433304953,
+        "deadline_delivery_ratio": 0.9348672477908552,
+        "delay_p50_ms": 0.7667500000006839,
+        "delay_p95_ms": 89.68475000000012,
+        "delay_p99_ms": 471.8157500000002,
+        "ho_failures_per_ue_min": 0.0,
+        "rlf_per_ue_min": 0.0,
+        "ping_pong_per_ue_min": 0.0,
+        "ho_attempts_per_ue_min": 1.0587725755923945,
+        "ping_pong_rate_per_completed_ho": 0.0,
+        "ho_attempts": 56,
+        "ho_completed": 54,
+        "ho_failed": 0,
+        "ho_ongoing_at_end": 2,
+        "rlf_events": 0,
+        "ping_pong_events": 0,
+        "deadline_misses": 1539,
+        "undelivered_packets": 40,
+        "num_scenarios": 4
+      }
+    },
+    "errors": [],
+    "runtime_s": 0.589,
+    "num_scenarios_evaluated": 4,
+    "score": {
+      "score": 115.27,
+      "ratios": {
+        "goodput": 1.0003,
+        "deadline_delivery": 0.9951,
+        "outage": 1.1427,
+        "rlf": 1.0,
+        "ho_failure": 1.0,
+        "ping_pong": 4.6892,
+        "ho_attempts": 2.185
+      },
+      "weights": {
+        "goodput": 0.3,
+        "deadline_delivery": 0.2,
+        "outage": 0.2,
+        "rlf": 0.15,
+        "ho_failure": 0.05,
+        "ping_pong": 0.05,
+        "ho_attempts": 0.05
+      },
+      "components": {
+        "goodput": {
+          "direction": "higher",
+          "normalized_weight": 0.3,
+          "weighted_log_contribution": 8.829665676430953e-05,
+          "score_factor": 1.0000883005550287,
+          "effect": "gain"
+        },
+        "deadline_delivery": {
+          "direction": "higher",
+          "normalized_weight": 0.2,
+          "weighted_log_contribution": -0.000985495227823389,
+          "score_factor": 0.999014990213119,
+          "effect": "regression"
+        },
+        "outage": {
+          "direction": "lower",
+          "normalized_weight": 0.2,
+          "weighted_log_contribution": 0.02667585075360117,
+          "score_factor": 1.0270348362327897,
+          "effect": "gain"
+        },
+        "rlf": {
+          "direction": "lower",
+          "normalized_weight": 0.15,
+          "weighted_log_contribution": 0.0,
+          "score_factor": 1.0,
+          "effect": "unchanged"
+        },
+        "ho_failure": {
+          "direction": "lower",
+          "normalized_weight": 0.05,
+          "weighted_log_contribution": 0.0,
+          "score_factor": 1.0,
+          "effect": "unchanged"
+        },
+        "ping_pong": {
+          "direction": "lower",
+          "normalized_weight": 0.05,
+          "weighted_log_contribution": 0.07726265792544419,
+          "score_factor": 1.0803257952626517,
+          "effect": "gain"
+        },
+        "ho_attempts": {
+          "direction": "lower",
+          "normalized_weight": 0.05,
+          "weighted_log_contribution": 0.039081878740274,
+          "score_factor": 1.0398556222330055,
+          "effect": "gain"
+        }
+      }
+    }
+  },
+  "a3_baseline": {
+    "status": "valid",
+    "metrics": {
+      "per_scenario": [
+        {
+          "scenario_id": "practice-seed10",
+          "num_ues": 64,
+          "ho_attempts": 41,
+          "ho_completed": 39,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 2,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 3,
+          "ping_pong_rate_per_completed_ho": 0.07692307692307693,
+          "outage_fraction": 0.010141093474426807,
+          "ho_interruption_fraction": 0.008818342151675485,
+          "radio_outage_fraction": 0.0013227513227513227,
+          "offered_bytes": 95573698,
+          "delivered_bytes": 95257595,
+          "goodput_ratio": 0.9966925733060994,
+          "deadline_delivery_ratio": 0.9409459284498963,
+          "deadline_misses": 356,
+          "undelivered_packets": 20,
+          "remaining_backlog_bytes": 316103,
+          "delay_p50_ms": 0.4279999999998836,
+          "delay_p95_ms": 57.36399999999958,
+          "delay_p99_ms": 861.0550000000003,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.19841269841269843,
+          "ho_attempts_per_ue_min": 2.7116402116402116,
+          "per_mode": {
+            "pedestrian": {
+              "num_ues": 18,
+              "ho_attempts": 3,
+              "ho_completed": 3,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.0024875621890547263
+            },
+            "cyclist": {
+              "num_ues": 4,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.0028089887640449437
+            },
+            "car": {
+              "num_ues": 20,
+              "ho_attempts": 22,
+              "ho_completed": 20,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.01583873290136789
+            },
+            "uav": {
+              "num_ues": 11,
+              "ho_attempts": 4,
+              "ho_completed": 4,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.009915014164305949
+            },
+            "bus": {
+              "num_ues": 6,
+              "ho_attempts": 6,
+              "ho_completed": 6,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.01276595744680851
+            },
+            "train": {
+              "num_ues": 5,
+              "ho_attempts": 5,
+              "ho_completed": 5,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.017114914425427872
+            }
+          },
+          "score": {
+            "score": 100.0,
+            "ratios": {
+              "goodput": 1.0,
+              "deadline_delivery": 1.0,
+              "outage": 1.0,
+              "rlf": 1.0,
+              "ho_failure": 1.0,
+              "ping_pong": 1.0,
+              "ho_attempts": 1.0
+            },
+            "weights": {
+              "goodput": 0.3,
+              "deadline_delivery": 0.2,
+              "outage": 0.2,
+              "rlf": 0.15,
+              "ho_failure": 0.05,
+              "ping_pong": 0.05,
+              "ho_attempts": 0.05
+            },
+            "components": {
+              "goodput": {
+                "direction": "higher",
+                "normalized_weight": 0.3,
+                "weighted_log_contribution": 0.0,
+                "score_factor": 1.0,
+                "effect": "unchanged"
+              },
+              "deadline_delivery": {
+                "direction": "higher",
+                "normalized_weight": 0.2,
+                "weighted_log_contribution": 0.0,
+                "score_factor": 1.0,
+                "effect": "unchanged"
+              },
+              "outage": {
+                "direction": "lower",
+                "normalized_weight": 0.2,
+                "weighted_log_contribution": 0.0,
+                "score_factor": 1.0,
+                "effect": "unchanged"
+              },
+              "rlf": {
+                "direction": "lower",
+                "normalized_weight": 0.15,
+                "weighted_log_contribution": 0.0,
+                "score_factor": 1.0,
+                "effect": "unchanged"
+              },
+              "ho_failure": {
+                "direction": "lower",
+                "normalized_weight": 0.05,
+                "weighted_log_contribution": 0.0,
+                "score_factor": 1.0,
+                "effect": "unchanged"
+              },
+              "ping_pong": {
+                "direction": "lower",
+                "normalized_weight": 0.05,
+                "weighted_log_contribution": 0.0,
+                "score_factor": 1.0,
+                "effect": "unchanged"
+              },
+              "ho_attempts": {
+                "direction": "lower",
+                "normalized_weight": 0.05,
+                "weighted_log_contribution": 0.0,
+                "score_factor": 1.0,
+                "effect": "unchanged"
+              }
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed7",
+          "num_ues": 69,
+          "ho_attempts": 36,
+          "ho_completed": 33,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 3,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 4,
+          "ping_pong_rate_per_completed_ho": 0.12121212121212122,
+          "outage_fraction": 0.009818360333824251,
+          "ho_interruption_fraction": 0.00859106529209622,
+          "radio_outage_fraction": 0.0012272950417280314,
+          "offered_bytes": 100166235,
+          "delivered_bytes": 99733333,
+          "goodput_ratio": 0.995678164403404,
+          "deadline_delivery_ratio": 0.8595202265513923,
+          "deadline_misses": 822,
+          "undelivered_packets": 29,
+          "remaining_backlog_bytes": 432902,
+          "delay_p50_ms": 0.569999999999709,
+          "delay_p95_ms": 209.8130000000001,
+          "delay_p99_ms": 887.5279999999984,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.29455081001472755,
+          "ho_attempts_per_ue_min": 2.6509572901325478,
+          "per_mode": {
+            "cyclist": {
+              "num_ues": 3,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "pedestrian": {
+              "num_ues": 15,
+              "ho_attempts": 5,
+              "ho_completed": 5,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.00522466039707419
+            },
+            "car": {
+              "num_ues": 22,
+              "ho_attempts": 15,
+              "ho_completed": 14,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.013039934800325998
+            },
+            "bus": {
+              "num_ues": 8,
+              "ho_attempts": 7,
+              "ho_completed": 6,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.018115942028985508
+            },
+            "train": {
+              "num_ues": 7,
+              "ho_attempts": 4,
+              "ho_completed": 4,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.011594202898550725
+            },
+            "uav": {
+              "num_ues": 14,
+              "ho_attempts": 5,
+              "ho_completed": 4,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.00639386189258312
+            }
+          },
+          "score": {
+            "score": 100.0,
+            "ratios": {
+              "goodput": 1.0,
+              "deadline_delivery": 1.0,
+              "outage": 1.0,
+              "rlf": 1.0,
+              "ho_failure": 1.0,
+              "ping_pong": 1.0,
+              "ho_attempts": 1.0
+            },
+            "weights": {
+              "goodput": 0.3,
+              "deadline_delivery": 0.2,
+              "outage": 0.2,
+              "rlf": 0.15,
+              "ho_failure": 0.05,
+              "ping_pong": 0.05,
+              "ho_attempts": 0.05
+            },
+            "components": {
+              "goodput": {
+                "direction": "higher",
+                "normalized_weight": 0.3,
+                "weighted_log_contribution": 0.0,
+                "score_factor": 1.0,
+                "effect": "unchanged"
+              },
+              "deadline_delivery": {
+                "direction": "higher",
+                "normalized_weight": 0.2,
+                "weighted_log_contribution": 0.0,
+                "score_factor": 1.0,
+                "effect": "unchanged"
+              },
+              "outage": {
+                "direction": "lower",
+                "normalized_weight": 0.2,
+                "weighted_log_contribution": 0.0,
+                "score_factor": 1.0,
+                "effect": "unchanged"
+              },
+              "rlf": {
+                "direction": "lower",
+                "normalized_weight": 0.15,
+                "weighted_log_contribution": 0.0,
+                "score_factor": 1.0,
+                "effect": "unchanged"
+              },
+              "ho_failure": {
+                "direction": "lower",
+                "normalized_weight": 0.05,
+                "weighted_log_contribution": 0.0,
+                "score_factor": 1.0,
+                "effect": "unchanged"
+              },
+              "ping_pong": {
+                "direction": "lower",
+                "normalized_weight": 0.05,
+                "weighted_log_contribution": 0.0,
+                "score_factor": 1.0,
+                "effect": "unchanged"
+              },
+              "ho_attempts": {
+                "direction": "lower",
+                "normalized_weight": 0.05,
+                "weighted_log_contribution": 0.0,
+                "score_factor": 1.0,
+                "effect": "unchanged"
+              }
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed8",
+          "num_ues": 62,
+          "ho_attempts": 28,
+          "ho_completed": 27,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 1,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 1,
+          "ping_pong_rate_per_completed_ho": 0.037037037037037035,
+          "outage_fraction": 0.007953340402969246,
+          "ho_interruption_fraction": 0.0071580063626723225,
+          "radio_outage_fraction": 0.0007953340402969247,
+          "offered_bytes": 109408973,
+          "delivered_bytes": 109408973,
+          "goodput_ratio": 1.0,
+          "deadline_delivery_ratio": 0.9755651942734167,
+          "deadline_misses": 209,
+          "undelivered_packets": 0,
+          "remaining_backlog_bytes": 0,
+          "delay_p50_ms": 1.6740000000008877,
+          "delay_p95_ms": 46.33299999999872,
+          "delay_p99_ms": 236.5109999999986,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.07953340402969246,
+          "ho_attempts_per_ue_min": 2.226935312831389,
+          "per_mode": {
+            "train": {
+              "num_ues": 5,
+              "ho_attempts": 4,
+              "ho_completed": 4,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.010443864229765013
+            },
+            "car": {
+              "num_ues": 17,
+              "ho_attempts": 15,
+              "ho_completed": 15,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.01596244131455399
+            },
+            "pedestrian": {
+              "num_ues": 17,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.001092896174863388
+            },
+            "bus": {
+              "num_ues": 12,
+              "ho_attempts": 4,
+              "ho_completed": 3,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.004297994269340974
+            },
+            "cyclist": {
+              "num_ues": 4,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "uav": {
+              "num_ues": 7,
+              "ho_attempts": 4,
+              "ho_completed": 4,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.01002004008016032
+            }
+          },
+          "score": {
+            "score": 100.0,
+            "ratios": {
+              "goodput": 1.0,
+              "deadline_delivery": 1.0,
+              "outage": 1.0,
+              "rlf": 1.0,
+              "ho_failure": 1.0,
+              "ping_pong": 1.0,
+              "ho_attempts": 1.0
+            },
+            "weights": {
+              "goodput": 0.3,
+              "deadline_delivery": 0.2,
+              "outage": 0.2,
+              "rlf": 0.15,
+              "ho_failure": 0.05,
+              "ping_pong": 0.05,
+              "ho_attempts": 0.05
+            },
+            "components": {
+              "goodput": {
+                "direction": "higher",
+                "normalized_weight": 0.3,
+                "weighted_log_contribution": 0.0,
+                "score_factor": 1.0,
+                "effect": "unchanged"
+              },
+              "deadline_delivery": {
+                "direction": "higher",
+                "normalized_weight": 0.2,
+                "weighted_log_contribution": 0.0,
+                "score_factor": 1.0,
+                "effect": "unchanged"
+              },
+              "outage": {
+                "direction": "lower",
+                "normalized_weight": 0.2,
+                "weighted_log_contribution": 0.0,
+                "score_factor": 1.0,
+                "effect": "unchanged"
+              },
+              "rlf": {
+                "direction": "lower",
+                "normalized_weight": 0.15,
+                "weighted_log_contribution": 0.0,
+                "score_factor": 1.0,
+                "effect": "unchanged"
+              },
+              "ho_failure": {
+                "direction": "lower",
+                "normalized_weight": 0.05,
+                "weighted_log_contribution": 0.0,
+                "score_factor": 1.0,
+                "effect": "unchanged"
+              },
+              "ping_pong": {
+                "direction": "lower",
+                "normalized_weight": 0.05,
+                "weighted_log_contribution": 0.0,
+                "score_factor": 1.0,
+                "effect": "unchanged"
+              },
+              "ho_attempts": {
+                "direction": "lower",
+                "normalized_weight": 0.05,
+                "weighted_log_contribution": 0.0,
+                "score_factor": 1.0,
+                "effect": "unchanged"
+              }
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed9",
+          "num_ues": 53,
+          "ho_attempts": 23,
+          "ho_completed": 23,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 0,
+          "ho_success_rate": 1.0,
+          "ho_failure_rate": 0.0,
+          "rlf_events": 0,
+          "ping_pong_events": 2,
+          "ping_pong_rate_per_completed_ho": 0.08695652173913043,
+          "outage_fraction": 0.008817856158721412,
+          "ho_interruption_fraction": 0.006337834114081014,
+          "radio_outage_fraction": 0.002480022044640397,
+          "offered_bytes": 66885493,
+          "delivered_bytes": 66855047,
+          "goodput_ratio": 0.999544804132639,
+          "deadline_delivery_ratio": 0.982304428854251,
+          "deadline_misses": 93,
+          "undelivered_packets": 3,
+          "remaining_backlog_bytes": 30446,
+          "delay_p50_ms": 0.3609999999998763,
+          "delay_p95_ms": 31.898999999999432,
+          "delay_p99_ms": 152.02400000000125,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.0,
+          "ping_pong_per_ue_min": 0.16533480297602646,
+          "ho_attempts_per_ue_min": 1.9013502342243043,
+          "per_mode": {
+            "car": {
+              "num_ues": 23,
+              "ho_attempts": 15,
+              "ho_completed": 15,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.015463917525773196
+            },
+            "pedestrian": {
+              "num_ues": 12,
+              "ho_attempts": 2,
+              "ho_completed": 2,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.0022148394241417496
+            },
+            "uav": {
+              "num_ues": 7,
+              "ho_attempts": 1,
+              "ho_completed": 1,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.0017482517482517483
+            },
+            "bus": {
+              "num_ues": 2,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "cyclist": {
+              "num_ues": 7,
+              "ho_attempts": 3,
+              "ho_completed": 3,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.00804289544235925
+            },
+            "train": {
+              "num_ues": 2,
+              "ho_attempts": 2,
+              "ho_completed": 2,
+              "ho_failed": 0,
+              "ho_success_rate": 1.0,
+              "outage_fraction": 0.014598540145985401
+            }
+          },
+          "score": {
+            "score": 100.0,
+            "ratios": {
+              "goodput": 1.0,
+              "deadline_delivery": 1.0,
+              "outage": 1.0,
+              "rlf": 1.0,
+              "ho_failure": 1.0,
+              "ping_pong": 1.0,
+              "ho_attempts": 1.0
+            },
+            "weights": {
+              "goodput": 0.3,
+              "deadline_delivery": 0.2,
+              "outage": 0.2,
+              "rlf": 0.15,
+              "ho_failure": 0.05,
+              "ping_pong": 0.05,
+              "ho_attempts": 0.05
+            },
+            "components": {
+              "goodput": {
+                "direction": "higher",
+                "normalized_weight": 0.3,
+                "weighted_log_contribution": 0.0,
+                "score_factor": 1.0,
+                "effect": "unchanged"
+              },
+              "deadline_delivery": {
+                "direction": "higher",
+                "normalized_weight": 0.2,
+                "weighted_log_contribution": 0.0,
+                "score_factor": 1.0,
+                "effect": "unchanged"
+              },
+              "outage": {
+                "direction": "lower",
+                "normalized_weight": 0.2,
+                "weighted_log_contribution": 0.0,
+                "score_factor": 1.0,
+                "effect": "unchanged"
+              },
+              "rlf": {
+                "direction": "lower",
+                "normalized_weight": 0.15,
+                "weighted_log_contribution": 0.0,
+                "score_factor": 1.0,
+                "effect": "unchanged"
+              },
+              "ho_failure": {
+                "direction": "lower",
+                "normalized_weight": 0.05,
+                "weighted_log_contribution": 0.0,
+                "score_factor": 1.0,
+                "effect": "unchanged"
+              },
+              "ping_pong": {
+                "direction": "lower",
+                "normalized_weight": 0.05,
+                "weighted_log_contribution": 0.0,
+                "score_factor": 1.0,
+                "effect": "unchanged"
+              },
+              "ho_attempts": {
+                "direction": "lower",
+                "normalized_weight": 0.05,
+                "weighted_log_contribution": 0.0,
+                "score_factor": 1.0,
+                "effect": "unchanged"
+              }
+            }
+          }
+        }
+      ],
+      "aggregate": {
+        "ho_success_rate": 1.0,
+        "ho_failure_rate": 0.0,
+        "outage_fraction": 0.00918266259248543,
+        "ho_interruption_fraction": 0.0077263119801312605,
+        "radio_outage_fraction": 0.001456350612354169,
+        "goodput_ratio": 0.9979788854605356,
+        "deadline_delivery_ratio": 0.939583944532239,
+        "delay_p50_ms": 0.7582500000000891,
+        "delay_p95_ms": 86.35224999999946,
+        "delay_p99_ms": 534.2794999999996,
+        "ho_failures_per_ue_min": 0.0,
+        "rlf_per_ue_min": 0.0,
+        "ping_pong_per_ue_min": 0.1844579288582862,
+        "ho_attempts_per_ue_min": 2.372720762207113,
+        "ping_pong_rate_per_completed_ho": 0.0805321892278414,
+        "ho_attempts": 128,
+        "ho_completed": 122,
+        "ho_failed": 0,
+        "ho_ongoing_at_end": 6,
+        "rlf_events": 0,
+        "ping_pong_events": 10,
+        "deadline_misses": 1480,
+        "undelivered_packets": 52,
+        "num_scenarios": 4
+      }
+    },
+    "errors": [],
+    "runtime_s": 0.5,
+    "num_scenarios_evaluated": 4,
+    "score": {
+      "score": 100.0,
+      "ratios": {
+        "goodput": 1.0,
+        "deadline_delivery": 1.0,
+        "outage": 1.0,
+        "rlf": 1.0,
+        "ho_failure": 1.0,
+        "ping_pong": 1.0,
+        "ho_attempts": 1.0
+      },
+      "weights": {
+        "goodput": 0.3,
+        "deadline_delivery": 0.2,
+        "outage": 0.2,
+        "rlf": 0.15,
+        "ho_failure": 0.05,
+        "ping_pong": 0.05,
+        "ho_attempts": 0.05
+      },
+      "components": {
+        "goodput": {
+          "direction": "higher",
+          "normalized_weight": 0.3,
+          "weighted_log_contribution": 0.0,
+          "score_factor": 1.0,
+          "effect": "unchanged"
+        },
+        "deadline_delivery": {
+          "direction": "higher",
+          "normalized_weight": 0.2,
+          "weighted_log_contribution": 0.0,
+          "score_factor": 1.0,
+          "effect": "unchanged"
+        },
+        "outage": {
+          "direction": "lower",
+          "normalized_weight": 0.2,
+          "weighted_log_contribution": 0.0,
+          "score_factor": 1.0,
+          "effect": "unchanged"
+        },
+        "rlf": {
+          "direction": "lower",
+          "normalized_weight": 0.15,
+          "weighted_log_contribution": 0.0,
+          "score_factor": 1.0,
+          "effect": "unchanged"
+        },
+        "ho_failure": {
+          "direction": "lower",
+          "normalized_weight": 0.05,
+          "weighted_log_contribution": 0.0,
+          "score_factor": 1.0,
+          "effect": "unchanged"
+        },
+        "ping_pong": {
+          "direction": "lower",
+          "normalized_weight": 0.05,
+          "weighted_log_contribution": 0.0,
+          "score_factor": 1.0,
+          "effect": "unchanged"
+        },
+        "ho_attempts": {
+          "direction": "lower",
+          "normalized_weight": 0.05,
+          "weighted_log_contribution": 0.0,
+          "score_factor": 1.0,
+          "effect": "unchanged"
+        }
+      }
+    }
+  },
+  "no_handover_reference": {
+    "status": "valid",
+    "metrics": {
+      "per_scenario": [
+        {
+          "scenario_id": "practice-seed10",
+          "num_ues": 64,
+          "ho_attempts": 0,
+          "ho_completed": 0,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 0,
+          "ho_success_rate": null,
+          "ho_failure_rate": null,
+          "rlf_events": 6,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": null,
+          "outage_fraction": 0.030864197530864196,
+          "ho_interruption_fraction": 0.0,
+          "radio_outage_fraction": 0.02513227513227513,
+          "offered_bytes": 95573698,
+          "delivered_bytes": 94109112,
+          "goodput_ratio": 0.9846758466958138,
+          "deadline_delivery_ratio": 0.8595785212789402,
+          "deadline_misses": 932,
+          "undelivered_packets": 126,
+          "remaining_backlog_bytes": 1464586,
+          "delay_p50_ms": 0.5190000000002328,
+          "delay_p95_ms": 327.01900000000023,
+          "delay_p99_ms": 2346.9170000000013,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.39682539682539686,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 0.0,
+          "per_mode": {
+            "pedestrian": {
+              "num_ues": 18,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.014096185737976783
+            },
+            "cyclist": {
+              "num_ues": 4,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.05337078651685393
+            },
+            "car": {
+              "num_ues": 20,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.011519078473722102
+            },
+            "uav": {
+              "num_ues": 11,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.00141643059490085
+            },
+            "bus": {
+              "num_ues": 6,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.1
+            },
+            "train": {
+              "num_ues": 5,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.097799511002445
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed7",
+          "num_ues": 69,
+          "ho_attempts": 0,
+          "ho_completed": 0,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 0,
+          "ho_success_rate": null,
+          "ho_failure_rate": null,
+          "rlf_events": 5,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": null,
+          "outage_fraction": 0.030927835051546393,
+          "ho_interruption_fraction": 0.0,
+          "radio_outage_fraction": 0.02577319587628866,
+          "offered_bytes": 100166235,
+          "delivered_bytes": 98143040,
+          "goodput_ratio": 0.979801626765746,
+          "deadline_delivery_ratio": 0.8715797094699627,
+          "deadline_misses": 929,
+          "undelivered_packets": 157,
+          "remaining_backlog_bytes": 2023195,
+          "delay_p50_ms": 0.7419999999983702,
+          "delay_p95_ms": 278.97399999999834,
+          "delay_p99_ms": 2403.2119999999995,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.36818851251840945,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 0.0,
+          "per_mode": {
+            "cyclist": {
+              "num_ues": 3,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "pedestrian": {
+              "num_ues": 15,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "car": {
+              "num_ues": 22,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.040749796251018745
+            },
+            "bus": {
+              "num_ues": 8,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.041666666666666664
+            },
+            "train": {
+              "num_ues": 7,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.028985507246376812
+            },
+            "uav": {
+              "num_ues": 14,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.054987212276214836
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed8",
+          "num_ues": 62,
+          "ho_attempts": 0,
+          "ho_completed": 0,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 0,
+          "ho_success_rate": null,
+          "ho_failure_rate": null,
+          "rlf_events": 9,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": null,
+          "outage_fraction": 0.0503711558854719,
+          "ho_interruption_fraction": 0.0,
+          "radio_outage_fraction": 0.03923647932131495,
+          "offered_bytes": 109408973,
+          "delivered_bytes": 107083679,
+          "goodput_ratio": 0.9787467706145089,
+          "deadline_delivery_ratio": 0.8946292732315475,
+          "deadline_misses": 781,
+          "undelivered_packets": 144,
+          "remaining_backlog_bytes": 2325294,
+          "delay_p50_ms": 1.7740000000012515,
+          "delay_p95_ms": 529.9590000000007,
+          "delay_p99_ms": 3721.9789999999994,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.7158006362672322,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 0.0,
+          "per_mode": {
+            "train": {
+              "num_ues": 5,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.15926892950391644
+            },
+            "car": {
+              "num_ues": 17,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.09389671361502347
+            },
+            "pedestrian": {
+              "num_ues": 17,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "bus": {
+              "num_ues": 12,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "cyclist": {
+              "num_ues": 4,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "uav": {
+              "num_ues": 7,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.05811623246492986
+            }
+          }
+        },
+        {
+          "scenario_id": "practice-seed9",
+          "num_ues": 53,
+          "ho_attempts": 0,
+          "ho_completed": 0,
+          "ho_failed": 0,
+          "ho_ongoing_at_end": 0,
+          "ho_success_rate": null,
+          "ho_failure_rate": null,
+          "rlf_events": 3,
+          "ping_pong_events": 0,
+          "ping_pong_rate_per_completed_ho": null,
+          "outage_fraction": 0.023973546431523836,
+          "ho_interruption_fraction": 0.0,
+          "radio_outage_fraction": 0.019840176357123176,
+          "offered_bytes": 66885493,
+          "delivered_bytes": 66171242,
+          "goodput_ratio": 0.9893212867549619,
+          "deadline_delivery_ratio": 0.9583884056891081,
+          "deadline_misses": 269,
+          "undelivered_packets": 65,
+          "remaining_backlog_bytes": 714251,
+          "delay_p50_ms": 0.4360000000015134,
+          "delay_p95_ms": 48.69599999999991,
+          "delay_p99_ms": 610.8080000000009,
+          "ho_failures_per_ue_min": 0.0,
+          "rlf_per_ue_min": 0.2480022044640397,
+          "ping_pong_per_ue_min": 0.0,
+          "ho_attempts_per_ue_min": 0.0,
+          "per_mode": {
+            "car": {
+              "num_ues": 23,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.03479381443298969
+            },
+            "pedestrian": {
+              "num_ues": 12,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.004429678848283499
+            },
+            "uav": {
+              "num_ues": 7,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "bus": {
+              "num_ues": 2,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "cyclist": {
+              "num_ues": 7,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.0
+            },
+            "train": {
+              "num_ues": 2,
+              "ho_attempts": 0,
+              "ho_completed": 0,
+              "ho_failed": 0,
+              "ho_success_rate": null,
+              "outage_fraction": 0.2116788321167883
+            }
+          }
+        }
+      ],
+      "aggregate": {
+        "ho_success_rate": null,
+        "ho_failure_rate": null,
+        "outage_fraction": 0.03403418372485158,
+        "ho_interruption_fraction": 0.0,
+        "radio_outage_fraction": 0.02749553167175048,
+        "goodput_ratio": 0.9831363827077576,
+        "deadline_delivery_ratio": 0.8960439774173896,
+        "delay_p50_ms": 0.867750000000342,
+        "delay_p95_ms": 296.1619999999998,
+        "delay_p99_ms": 2270.7290000000003,
+        "ho_failures_per_ue_min": 0.0,
+        "rlf_per_ue_min": 0.43220418751876954,
+        "ping_pong_per_ue_min": 0.0,
+        "ho_attempts_per_ue_min": 0.0,
+        "ping_pong_rate_per_completed_ho": null,
+        "ho_attempts": 0,
+        "ho_completed": 0,
+        "ho_failed": 0,
+        "ho_ongoing_at_end": 0,
+        "rlf_events": 23,
+        "ping_pong_events": 0,
+        "deadline_misses": 2911,
+        "undelivered_packets": 492,
+        "num_scenarios": 4
+      }
+    },
+    "errors": [],
+    "runtime_s": 0.477,
+    "num_scenarios_evaluated": 4,
+    "score": {
+      "score": 81.42,
+      "ratios": {
+        "goodput": 0.9854,
+        "deadline_delivery": 0.9546,
+        "outage": 0.5401,
+        "rlf": 0.1037,
+        "ho_failure": 1.0,
+        "ping_pong": 4.6892,
+        "ho_attempts": 48.4544
+      },
+      "weights": {
+        "goodput": 0.3,
+        "deadline_delivery": 0.2,
+        "outage": 0.2,
+        "rlf": 0.15,
+        "ho_failure": 0.05,
+        "ping_pong": 0.05,
+        "ho_attempts": 0.05
+      },
+      "components": {
+        "goodput": {
+          "direction": "higher",
+          "normalized_weight": 0.3,
+          "weighted_log_contribution": -0.004406310658756325,
+          "score_factor": 0.9956033828852393,
+          "effect": "regression"
+        },
+        "deadline_delivery": {
+          "direction": "higher",
+          "normalized_weight": 0.2,
+          "weighted_log_contribution": -0.00928708512117862,
+          "score_factor": 0.9907559066614599,
+          "effect": "regression"
+        },
+        "outage": {
+          "direction": "lower",
+          "normalized_weight": 0.2,
+          "weighted_log_contribution": -0.12320841842433548,
+          "score_factor": 0.8840793849256671,
+          "effect": "regression"
+        },
+        "rlf": {
+          "direction": "lower",
+          "normalized_weight": 0.15,
+          "weighted_log_contribution": -0.33995169667141406,
+          "score_factor": 0.7118047044687565,
+          "effect": "regression"
+        },
+        "ho_failure": {
+          "direction": "lower",
+          "normalized_weight": 0.05,
+          "weighted_log_contribution": 0.0,
+          "score_factor": 1.0,
+          "effect": "unchanged"
+        },
+        "ping_pong": {
+          "direction": "lower",
+          "normalized_weight": 0.05,
+          "weighted_log_contribution": 0.07726265792544419,
+          "score_factor": 1.0803257952626517,
+          "effect": "gain"
+        },
+        "ho_attempts": {
+          "direction": "lower",
+          "normalized_weight": 0.05,
+          "weighted_log_contribution": 0.19403117320473773,
+          "score_factor": 1.2141341308181495,
+          "effect": "gain"
+        }
+      }
+    }
+  },
+  "score_delta_vs_a3": 15.27
+}

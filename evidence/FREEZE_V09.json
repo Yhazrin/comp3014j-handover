@@ -1,0 +1,23 @@
+{
+  "frozen_at": "2026-10-23T20:06:46.996884+08:00",
+  "candidate": "./APlus_Study/submission/algorithm.py",
+  "sha256": "d524ee626dc30a200cc134c35494663d742a1069d19ff3e0cdda4903bbbc7e7d",
+  "train": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "validation": [
+    7,
+    8,
+    9,
+    10
+  ],
+  "validation_previously_used": false,
+  "training_selection_score": 131.62,
+  "change_since_training_evidence": "Only remove zero-weight load ranking; no parameter or decision rule changes.",
+  "status": "Candidate frozen for first holdout; A+ threshold not achieved on training. Do not select new parameters using this holdout."
+}
