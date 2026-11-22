@@ -1,0 +1,33 @@
+{
+  "public_cli_scores": {
+    "BASELINE": 126.45,
+    "MODIFIED": 126.41,
+    "ROLLBACK": 126.45,
+    "REUSED_HOLDOUT": 115.59
+  },
+  "fresh_synthetic": {
+    "scope": "New synthetic trajectories 87301-87320; results compared against their own A3. Per-mode rates pooled by bytes are descriptive only.",
+    "Q": {
+      "S": 118.9,
+      "ho": 419,
+      "rlf": 0,
+      "outage": 0.008355040370438296,
+      "on_time": 0.9006152361737833,
+      "pooled_missed_byte_pct": {
+        "pedestrian": 8.304481527181938,
+        "uav": 11.956647366479645
+      }
+    },
+    "drain": {
+      "S": 118.8,
+      "ho": 429,
+      "rlf": 0,
+      "outage": 0.008468914298111061,
+      "on_time": 0.9029244281743509,
+      "pooled_missed_byte_pct": {
+        "pedestrian": 7.827992434004727,
+        "uav": 11.684353157718842
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "public_cli_scores": {
+    "BASELINE": 126.45,
+    "MODIFIED": 125.28,
+    "ROLLBACK": 126.45,
+    "REUSED_HOLDOUT": 115.27
+  },
+  "fresh_synthetic": {
+    "queue": {
+      "score": 118.78,
+      "metrics": {
+        "ho_success_rate": 1.0,
+        "ho_failure_rate": 0.0,
+        "outage_fraction": 0.008123484902917113,
+        "ho_interruption_fraction": 0.0047707362124664,
+        "radio_outage_fraction": 0.003352748690450713,
+        "goodput_ratio": 0.9930019579580129,
+        "deadline_delivery_ratio": 0.8960664786744305,
+        "delay_p50_ms": 4.468600000000333,
+        "delay_p95_ms": 275.599,
+        "delay_p99_ms": 1424.7755000000004,
+        "ho_failures_per_ue_min": 0.0,
+        "rlf_per_ue_min": 0.0,
+        "ping_pong_per_ue_min": 0.0,
+        "ho_attempts_per_ue_min": 1.4536034925361885,
+        "ping_pong_rate_per_completed_ho": 0.0,
+        "ho_attempts": 197,
+        "ho_completed": 192,
+        "ho_failed": 0,
+        "ho_ongoing_at_end": 5,
+        "rlf_events": 0,
+        "ping_pong_events": 0,
+        "deadline_misses": 12816,
+        "undelivered_packets": 549,
+        "num_scenarios": 10
+      }
+    },
+    "h12": {
+      "score": 119.16,
+      "metrics": {
+        "ho_success_rate": 1.0,
+        "ho_failure_rate": 0.0,
+        "outage_fraction": 0.008023764182783234,
+        "ho_interruption_fraction": 0.004403199028846196,
+        "radio_outage_fraction": 0.0036205651539370372,
+        "goodput_ratio": 0.9931427617865373,
+        "deadline_delivery_ratio": 0.8910169807219092,
+        "delay_p50_ms": 4.483000000000357,
+        "delay_p95_ms": 297.4522999999999,
+        "delay_p99_ms": 1499.8700000000003,
+        "ho_failures_per_ue_min": 0.0,
+        "rlf_per_ue_min": 0.0,
+        "ping_pong_per_ue_min": 0.0,
+        "ho_attempts_per_ue_min": 1.3504328597852728,
+        "ping_pong_rate_per_completed_ho": 0.0,
+        "ho_attempts": 183,
+        "ho_completed": 176,
+        "ho_failed": 0,
+        "ho_ongoing_at_end": 7,
+        "rlf_events": 0,
+        "ping_pong_events": 0,
+        "deadline_misses": 13164,
+        "undelivered_packets": 534,
+        "num_scenarios": 10
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "scope": "Fixed-KPI sensitivity of the official score on the complete practice suite. Not a physical policy simulation, private estimate, or additive decomposition. Thresholds use rounded official S.",
+  "base_score": 126.45,
+  "offline_future_score": 131.22,
+  "thresholds": {
+    "127": {
+      "outage_fraction_if_only_outage_changes": 0.006234272808905135,
+      "attempts_per_ue_min_if_only_attempt_rate_changes": 1.1198689676876654
+    },
+    "131": {
+      "outage_fraction_if_only_outage_changes": 0.002466144423893179,
+      "attempts_per_ue_min_if_only_attempt_rate_changes": 0.5791805443841935
+    }
+  },
+  "change_one_kpi": {
+    "outage_fraction": {
+      "queue": 0.006801266689540816,
+      "future_informed": 0.004067058992569573,
+      "score_replacing_only_this_aggregate": 129.2
+    },
+    "ho_attempts_per_ue_min": {
+      "queue": 1.224331387698154,
+      "future_informed": 0.8054502494972586,
+      "score_replacing_only_this_aggregate": 129.0
+    },
+    "deadline_delivery_ratio": {
+      "queue": 0.9313072026331529,
+      "future_informed": 0.9141923875104958,
+      "score_replacing_only_this_aggregate": 125.99
+    },
+    "goodput_ratio": {
+      "queue": 0.9977517865865912,
+      "future_informed": 0.9950040842585895,
+      "score_replacing_only_this_aggregate": 126.35
+    }
+  },
+  "perfect_one_kpi": {
+    "goodput_ratio": 126.54,
+    "deadline_delivery_ratio": 128.23
+  }
+}

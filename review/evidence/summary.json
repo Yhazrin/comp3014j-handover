@@ -1,0 +1,12 @@
+{
+  "scope": "complete public practice suite",
+  "sha256": "479bb93f6d43d4a9d84baac4f79f318f3456bda34bedb79a390ee25e491f0e7f",
+  "scenarios": 10,
+  "scores": {
+    "starter": 84.93,
+    "A3": 100.0,
+    "VASH-Q": 126.45
+  },
+  "requests": 162,
+  "outage_pct": 0.6801266689540816
+}

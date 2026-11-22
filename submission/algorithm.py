@@ -1,7 +1,7 @@
-# Brightspace group: GROUP_ID (learning exemplar; replace with real details)
-# Members (name, student number): MEMBER_1; MEMBER_2; MEMBER_3
-# AI-assisted development is disclosed in the accompanying learning materials.
-"""VASH: Volatility-Aware Safety Handover, reference version 1.0.
+# Brightspace group: 25
+# Members: Haoze Yang; Fanshu Yu; Heng Zhang (student numbers to be confirmed)
+# AI-assisted development is disclosed in the accompanying report.
+"""VASH: Volatility-Aware Safety Handover, queue-memory candidate.
 
 Only current device observations and instance-local history are used.
 The serving SINR is inferred under a common interference-plus-noise model;
@@ -17,6 +17,7 @@ class StudentPolicy:
         self.step_ms = max(1.0, float(config.get("delta_t_ms", 200)))
         self.last_request_ms = -1e12
         self.history = {}
+        self.recent_queue = 0.0
         self.variance = {}
         self.serving = None
         self.bad_since_ms = None
@@ -95,8 +96,10 @@ class StudentPolicy:
         prolonged_risk = self.bad_since_ms is not None and now - self.bad_since_ms >= 800
         floor = -6.0 if prolonged_risk else self.target_floor_db
         boundary = -8 + self.source_margin
-        if observation.get("queue_backlog_bytes", 0) >= 100000:
-            boundary = max(boundary, -6)
+        # Recent unserved bytes are evidence of demand, even if this tick's queue is empty.
+        self.recent_queue = max(float(observation.get("queue_backlog_bytes", 0)), self.recent_queue * 0.95 ** (self.step_ms / 200.0))
+        demand = min(1.0, self.recent_queue / 100000)
+        boundary += 2.0 * demand
         options = []
         for c in candidates:
             quality = c["rs_sinr_db"] - self.target_sigma_weight * math.sqrt(self.variance[c["cell_id"]])
@@ -105,6 +108,11 @@ class StudentPolicy:
         if not options:
             return stay
         best = max(options, key=lambda item: item[:2])[2]
+        strength = best["rs_sinr_db"] - self.target_sigma_weight * math.sqrt(self.variance[best["cell_id"]])
+        confidence = max(0.0, min(1.0, strength / 6.0))
+        boundary += confidence
+        if prolonged_risk:
+            boundary = max(boundary, -6.0)
         if (serving_sinr < boundary and best["rs_sinr_db"] - serving_sinr > 3
                 and now - self.last_request_ms >= self.cooldown_ms):
             self.last_request_ms = now

@@ -1,0 +1,89 @@
+{
+  "public_cli_scores": {
+    "BASELINE": 126.45,
+    "MODIFIED": 126.37,
+    "ROLLBACK": 126.45,
+    "REUSED_HOLDOUT": 115.73
+  },
+  "fresh_synthetic": {
+    "scope": "New synthetic seeds 90601-90620, compared with their own A3; not private data",
+    "Q": {
+      "S": 118.21,
+      "ho_attempts": 408,
+      "ho_failed": 0,
+      "rlf_events": 0,
+      "radio_outage_fraction": 0.0033603766674351553,
+      "outage_fraction": 0.008315570717553861,
+      "ho_interruption_fraction": 0.004955194050118706,
+      "deadline_delivery_ratio": 0.9067088328852616
+    },
+    "lead": {
+      "S": 118.34,
+      "ho_attempts": 413,
+      "ho_failed": 0,
+      "rlf_events": 0,
+      "radio_outage_fraction": 0.003052266856164898,
+      "outage_fraction": 0.008082890730854855,
+      "ho_interruption_fraction": 0.005030623874689957,
+      "deadline_delivery_ratio": 0.9070963513729838
+    }
+  },
+  "blind_shadow": {
+    "scope": "Shadow signals on Q trajectories; alarms outside the two-tick label are not necessarily harmful. A label may be missed if Q acts at the preceding tick. No thresholds tuned here.",
+    "cut": -0.4603304,
+    "results": {
+      "public_development": {
+        "max_prediction": -0.21180206699999998,
+        "counts": {
+          "eligible": 873,
+          "two_step_persistent": 15,
+          "frozen_alarms": 17,
+          "frozen_two_step_persistent": 0,
+          "frozen_same_request_within_6": 12
+        }
+      },
+      "synthetic_screen": {
+        "max_prediction": -0.21180206699999998,
+        "counts": {
+          "eligible": 2679,
+          "two_step_persistent": 56,
+          "frozen_alarms": 42,
+          "frozen_two_step_persistent": 2,
+          "frozen_same_request_within_6": 35
+        }
+      },
+      "fresh_policy_test": {
+        "max_prediction": -0.21180206699999998,
+        "counts": {
+          "eligible": 2503,
+          "two_step_persistent": 70,
+          "frozen_alarms": 46,
+          "frozen_two_step_persistent": 2,
+          "frozen_same_request_within_6": 37
+        }
+      }
+    }
+  },
+  "hindsight_screen": {
+    "seeds": "90101-90120 synthetic; no public/private score here",
+    "counts": {
+      "observed_bad_idle_ticks": 230,
+      "idle_onsets": 175,
+      "onset_one": 57,
+      "two_tick_stay_one": 54,
+      "safe_at_lead_one": 27,
+      "onset_multi": 116,
+      "two_tick_stay_multi": 114,
+      "safe_at_lead_multi": 56,
+      "all_radio_ticks": 230,
+      "onset_censored": 2,
+      "two_tick_stay_censored": 2,
+      "safe_at_lead_censored": 1
+    },
+    "paired_replays": 56,
+    "fewer_outage_ticks": 56,
+    "fewer_outage_no_extra_requests_or_rlf": 56,
+    "independent_event_saved_ticks_nonadditive": 64,
+    "events_with_extra_rlf": 0
+  }
+}

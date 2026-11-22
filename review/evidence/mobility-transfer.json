@@ -1,0 +1,301 @@
+{
+  "provenance": "Fitted on public seeds 1-6 only. Fixed geometry; fresh synthetic UE trajectories, fading and packet schedules. This is not the private suite.",
+  "seeds": [
+    47301,
+    47302,
+    47303,
+    47304,
+    47305,
+    47306,
+    47307,
+    47308,
+    47309,
+    47310
+  ],
+  "results": {
+    "A3": {
+      "score": 100.0,
+      "metrics": {
+        "ho_success_rate": 0.9908982683982683,
+        "ho_failure_rate": 0.008978578892371997,
+        "outage_fraction": 0.01157399078464332,
+        "ho_interruption_fraction": 0.009010298424308925,
+        "radio_outage_fraction": 0.0021938251109302376,
+        "goodput_ratio": 0.9916771247878733,
+        "deadline_delivery_ratio": 0.9047967121228865,
+        "delay_p50_ms": 3.584600000000228,
+        "delay_p95_ms": 183.37360000000007,
+        "delay_p99_ms": 895.6659999999996,
+        "ho_failures_per_ue_min": 0.022192034964249478,
+        "rlf_per_ue_min": 0.022192034964249478,
+        "ping_pong_per_ue_min": 0.1614363600877447,
+        "ho_attempts_per_ue_min": 2.7247768520261544,
+        "ping_pong_rate_per_completed_ho": 0.05945602344111397,
+        "ho_attempts": 372,
+        "ho_completed": 363,
+        "ho_failed": 3,
+        "ho_ongoing_at_end": 6,
+        "rlf_events": 3,
+        "ping_pong_events": 22,
+        "deadline_misses": 13539,
+        "undelivered_packets": 560,
+        "num_scenarios": 10
+      },
+      "per_seed": [
+        {
+          "seed": "fresh-47301",
+          "score": 100.0
+        },
+        {
+          "seed": "fresh-47302",
+          "score": 100.0
+        },
+        {
+          "seed": "fresh-47303",
+          "score": 100.0
+        },
+        {
+          "seed": "fresh-47304",
+          "score": 100.0
+        },
+        {
+          "seed": "fresh-47305",
+          "score": 100.0
+        },
+        {
+          "seed": "fresh-47306",
+          "score": 100.0
+        },
+        {
+          "seed": "fresh-47307",
+          "score": 100.0
+        },
+        {
+          "seed": "fresh-47308",
+          "score": 100.0
+        },
+        {
+          "seed": "fresh-47309",
+          "score": 100.0
+        },
+        {
+          "seed": "fresh-47310",
+          "score": 100.0
+        }
+      ]
+    },
+    "V10": {
+      "score": 119.86,
+      "metrics": {
+        "ho_success_rate": 1.0,
+        "ho_failure_rate": 0.0,
+        "outage_fraction": 0.008542764982118818,
+        "ho_interruption_fraction": 0.004182986664250933,
+        "radio_outage_fraction": 0.004226657977079812,
+        "goodput_ratio": 0.9919142370290517,
+        "deadline_delivery_ratio": 0.9066754801873993,
+        "delay_p50_ms": 3.611399999999867,
+        "delay_p95_ms": 182.8233000000002,
+        "delay_p99_ms": 1040.9893999999997,
+        "ho_failures_per_ue_min": 0.0,
+        "rlf_per_ue_min": 0.007987220447284345,
+        "ping_pong_per_ue_min": 0.0,
+        "ho_attempts_per_ue_min": 1.2692579431250812,
+        "ping_pong_rate_per_completed_ho": 0.0,
+        "ho_attempts": 173,
+        "ho_completed": 169,
+        "ho_failed": 0,
+        "ho_ongoing_at_end": 4,
+        "rlf_events": 1,
+        "ping_pong_events": 0,
+        "deadline_misses": 13389,
+        "undelivered_packets": 542,
+        "num_scenarios": 10
+      },
+      "per_seed": [
+        {
+          "seed": "fresh-47301",
+          "score": 114.79
+        },
+        {
+          "seed": "fresh-47302",
+          "score": 116.16
+        },
+        {
+          "seed": "fresh-47303",
+          "score": 111.57
+        },
+        {
+          "seed": "fresh-47304",
+          "score": 137.71
+        },
+        {
+          "seed": "fresh-47305",
+          "score": 114.03
+        },
+        {
+          "seed": "fresh-47306",
+          "score": 115.1
+        },
+        {
+          "seed": "fresh-47307",
+          "score": 115.94
+        },
+        {
+          "seed": "fresh-47308",
+          "score": 110.44
+        },
+        {
+          "seed": "fresh-47309",
+          "score": 131.1
+        },
+        {
+          "seed": "fresh-47310",
+          "score": 117.51
+        }
+      ]
+    },
+    "queue": {
+      "score": 122.34,
+      "metrics": {
+        "ho_success_rate": 1.0,
+        "ho_failure_rate": 0.0,
+        "outage_fraction": 0.008117636455905257,
+        "ho_interruption_fraction": 0.004691794205419879,
+        "radio_outage_fraction": 0.0034258422504853787,
+        "goodput_ratio": 0.9924729812936943,
+        "deadline_delivery_ratio": 0.909340782623698,
+        "delay_p50_ms": 3.5975999999999657,
+        "delay_p95_ms": 180.7351000000001,
+        "delay_p99_ms": 1024.1492,
+        "ho_failures_per_ue_min": 0.0,
+        "rlf_per_ue_min": 0.0,
+        "ping_pong_per_ue_min": 0.0,
+        "ho_attempts_per_ue_min": 1.4222253777513796,
+        "ping_pong_rate_per_completed_ho": 0.0,
+        "ho_attempts": 194,
+        "ho_completed": 190,
+        "ho_failed": 0,
+        "ho_ongoing_at_end": 4,
+        "rlf_events": 0,
+        "ping_pong_events": 0,
+        "deadline_misses": 13203,
+        "undelivered_packets": 510,
+        "num_scenarios": 10
+      },
+      "per_seed": [
+        {
+          "seed": "fresh-47301",
+          "score": 136.51
+        },
+        {
+          "seed": "fresh-47302",
+          "score": 115.94
+        },
+        {
+          "seed": "fresh-47303",
+          "score": 110.94
+        },
+        {
+          "seed": "fresh-47304",
+          "score": 137.63
+        },
+        {
+          "seed": "fresh-47305",
+          "score": 114.84
+        },
+        {
+          "seed": "fresh-47306",
+          "score": 113.4
+        },
+        {
+          "seed": "fresh-47307",
+          "score": 114.71
+        },
+        {
+          "seed": "fresh-47308",
+          "score": 109.59
+        },
+        {
+          "seed": "fresh-47309",
+          "score": 129.06
+        },
+        {
+          "seed": "fresh-47310",
+          "score": 117.22
+        }
+      ]
+    },
+    "timing": {
+      "score": 122.31,
+      "metrics": {
+        "ho_success_rate": 1.0,
+        "ho_failure_rate": 0.0,
+        "outage_fraction": 0.00819258809203258,
+        "ho_interruption_fraction": 0.004643905197444135,
+        "radio_outage_fraction": 0.003548682894588445,
+        "goodput_ratio": 0.9923376812550998,
+        "deadline_delivery_ratio": 0.9086417503325327,
+        "delay_p50_ms": 3.594799999999941,
+        "delay_p95_ms": 181.42540000000008,
+        "delay_p99_ms": 1038.0354,
+        "ho_failures_per_ue_min": 0.0,
+        "rlf_per_ue_min": 0.0,
+        "ping_pong_per_ue_min": 0.0,
+        "ho_attempts_per_ue_min": 1.4078586753586566,
+        "ping_pong_rate_per_completed_ho": 0.0,
+        "ho_attempts": 192,
+        "ho_completed": 187,
+        "ho_failed": 0,
+        "ho_ongoing_at_end": 5,
+        "rlf_events": 0,
+        "ping_pong_events": 0,
+        "deadline_misses": 13277,
+        "undelivered_packets": 522,
+        "num_scenarios": 10
+      },
+      "per_seed": [
+        {
+          "seed": "fresh-47301",
+          "score": 136.2
+        },
+        {
+          "seed": "fresh-47302",
+          "score": 115.34
+        },
+        {
+          "seed": "fresh-47303",
+          "score": 112.12
+        },
+        {
+          "seed": "fresh-47304",
+          "score": 137.21
+        },
+        {
+          "seed": "fresh-47305",
+          "score": 114.84
+        },
+        {
+          "seed": "fresh-47306",
+          "score": 113.28
+        },
+        {
+          "seed": "fresh-47307",
+          "score": 114.15
+        },
+        {
+          "seed": "fresh-47308",
+          "score": 109.92
+        },
+        {
+          "seed": "fresh-47309",
+          "score": 129.58
+        },
+        {
+          "seed": "fresh-47310",
+          "score": 117.08
+        }
+      ]
+    }
+  }
+}

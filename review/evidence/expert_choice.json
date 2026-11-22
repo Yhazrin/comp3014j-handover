@@ -1,0 +1,97 @@
+{
+  "public_cli_scores": {
+    "BASELINE": 126.45,
+    "MODIFIED": 126.43,
+    "ROLLBACK": 126.45,
+    "REUSED_HOLDOUT": 115.51
+  },
+  "fresh_synthetic": {
+    "Q": {
+      "score": 118.69,
+      "metrics": {
+        "ho_success_rate": 1.0,
+        "ho_failure_rate": 0.0,
+        "outage_fraction": 0.007963826057586512,
+        "ho_interruption_fraction": 0.004532748394210967,
+        "radio_outage_fraction": 0.0034310776633755453,
+        "goodput_ratio": 0.9924373038829954,
+        "deadline_delivery_ratio": 0.8922056429382915,
+        "delay_p50_ms": 4.084916666666648,
+        "delay_p95_ms": 232.85683333333358,
+        "delay_p99_ms": 1084.9913333333334,
+        "ho_failures_per_ue_min": 0.0,
+        "rlf_per_ue_min": 0.0,
+        "ping_pong_per_ue_min": 0.0,
+        "ho_attempts_per_ue_min": 1.3909930056758757,
+        "ping_pong_rate_per_completed_ho": 0.0,
+        "ho_attempts": 229,
+        "ho_completed": 218,
+        "ho_failed": 0,
+        "ho_ongoing_at_end": 11,
+        "rlf_events": 0,
+        "ping_pong_events": 0,
+        "deadline_misses": 14966,
+        "undelivered_packets": 688,
+        "num_scenarios": 12
+      }
+    },
+    "STOP": {
+      "score": 116.01,
+      "metrics": {
+        "ho_success_rate": 0.9958333333333332,
+        "ho_failure_rate": 0.004166666666666667,
+        "outage_fraction": 0.008145815847656427,
+        "ho_interruption_fraction": 0.004291813202921959,
+        "radio_outage_fraction": 0.0037498880353724813,
+        "goodput_ratio": 0.9920025676142838,
+        "deadline_delivery_ratio": 0.8879571880904948,
+        "delay_p50_ms": 4.111499999999846,
+        "delay_p95_ms": 242.6579166666667,
+        "delay_p99_ms": 1046.1438333333333,
+        "ho_failures_per_ue_min": 0.006246876561719141,
+        "rlf_per_ue_min": 0.006246876561719141,
+        "ping_pong_per_ue_min": 0.0,
+        "ho_attempts_per_ue_min": 1.3056712690610515,
+        "ping_pong_rate_per_completed_ho": 0.0,
+        "ho_attempts": 215,
+        "ho_completed": 206,
+        "ho_failed": 1,
+        "ho_ongoing_at_end": 8,
+        "rlf_events": 1,
+        "ping_pong_events": 0,
+        "deadline_misses": 15354,
+        "undelivered_packets": 698,
+        "num_scenarios": 12
+      }
+    },
+    "choice": {
+      "score": 118.77,
+      "metrics": {
+        "ho_success_rate": 1.0,
+        "ho_failure_rate": 0.0,
+        "outage_fraction": 0.0078848346058334,
+        "ho_interruption_fraction": 0.004413504910188021,
+        "radio_outage_fraction": 0.0034713296956453803,
+        "goodput_ratio": 0.9920798745088019,
+        "deadline_delivery_ratio": 0.8881932066389074,
+        "delay_p50_ms": 4.081250000000106,
+        "delay_p95_ms": 240.23441666666682,
+        "delay_p99_ms": 1128.5319166666668,
+        "ho_failures_per_ue_min": 0.0,
+        "rlf_per_ue_min": 0.0,
+        "ping_pong_per_ue_min": 0.0,
+        "ho_attempts_per_ue_min": 1.360598617956083,
+        "ping_pong_rate_per_completed_ho": 0.0,
+        "ho_attempts": 224,
+        "ho_completed": 212,
+        "ho_failed": 0,
+        "ho_ongoing_at_end": 12,
+        "rlf_events": 0,
+        "ping_pong_events": 0,
+        "deadline_misses": 15277,
+        "undelivered_packets": 713,
+        "num_scenarios": 12
+      }
+    }
+  }
+}

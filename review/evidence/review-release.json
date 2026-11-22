@@ -1,0 +1,29 @@
+{
+  "inputs_sha256": {
+    "submission/algorithm.py": "479bb93f6d43d4a9d84baac4f79f318f3456bda34bedb79a390ee25e491f0e7f",
+    "submission/report.pdf": "af64ed47c23c4e421753dcde71c5f33d63035b4f0857bbae7cdf66c5337b219b",
+    "report/report.tex": "6e230d36eade00101b5eab609110de4500e483d19d6301856b1b8c14cd7f04ea",
+    "course/brief/Assignment_comp3014j_Document_2_Background.docx": "4238cf943f631cace77992bcd4c9694432ae7f681638928ac774fd4676b0bd49",
+    "course/brief/Assignment_comp3014j_Document_1_Instructions.docx": "8da5dc2a7b23a63fb76b04ab1e26ff926d7ad83628a6029e3369e45261532c1c"
+  },
+  "pristine_official_package_files_from_student_zip": 33,
+  "environment": "Python 3.11.15; numpy 2.4.6; pandas 3.1.0",
+  "scope": "Fresh staged checkout; matched report Table 2 and Table 3. No private run.",
+  "public": {
+    "scope": "complete public practice suite",
+    "sha256": "479bb93f6d43d4a9d84baac4f79f318f3456bda34bedb79a390ee25e491f0e7f",
+    "scenarios": 10,
+    "scores": {
+      "starter": 84.93,
+      "A3": 100.0,
+      "VASH-Q": 126.45
+    },
+    "requests": 162,
+    "outage_pct": 0.6801266689540816
+  },
+  "synthetic_47301_to_47310": {
+    "A3": 100.0,
+    "VASH-Q": 122.34,
+    "candidate": 122.31
+  }
+}

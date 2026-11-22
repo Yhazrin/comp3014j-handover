@@ -1,0 +1,5 @@
+policy,development_index,requests,link_failures,outage_pct,on_time_pct
+A3,100.00,217,3,1.204,93.31
+V10 unchanged,131.97,101,0,0.810,91.76
+Confidence and sustained-risk boundary,132.15,103,0,0.785,91.91
+Add queue memory (VASH-Q),132.22,108,0,0.768,92.76

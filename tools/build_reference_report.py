@@ -155,7 +155,7 @@ def footer(c,doc):
  c.drawRightString(190*mm,13*mm,f'{doc.page} / 8')
  if doc.page>1:
   c.setFont('Helvetica-Bold',7.5);c.setFillColor(teal);c.drawString(20*mm,285*mm,'COMP3014J   /   FROZEN REFERENCE V10')
-out=root/'submission/report.pdf'
+out=root/'historical-v10-report.pdf'
 SimpleDocTemplate(str(out),pagesize=(210*mm,297*mm),rightMargin=20*mm,leftMargin=20*mm,topMargin=21*mm,bottomMargin=24*mm,title='VASH: Volatility-Aware Safety Handover',author='AI-assisted learning exemplar; actual group details pending').build(story,onFirstPage=footer,onLaterPages=footer)
 from pypdf import PdfReader
 reader=PdfReader(out);assert len(reader.pages)==8, len(reader.pages)

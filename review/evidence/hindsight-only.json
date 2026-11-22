@@ -1,0 +1,31 @@
+{
+  "label": "non-submittable future-informed diagnostic, not an upper bound",
+  "cost": "1 outage + 2 request units",
+  "score": 131.22,
+  "metrics": {
+    "ho_success_rate": 1.0,
+    "ho_failure_rate": 0.0,
+    "outage_fraction": 0.004067058992569573,
+    "ho_interruption_fraction": 0.0026848341649908626,
+    "radio_outage_fraction": 0.0013822248275787102,
+    "goodput_ratio": 0.9950040842585895,
+    "deadline_delivery_ratio": 0.9141923875104958,
+    "delay_p50_ms": 0.9354000000001179,
+    "delay_p95_ms": 108.10829999999969,
+    "delay_p99_ms": 921.5395000000002,
+    "ho_failures_per_ue_min": 0.0,
+    "rlf_per_ue_min": 0.0,
+    "ping_pong_per_ue_min": 0.0,
+    "ho_attempts_per_ue_min": 0.8054502494972586,
+    "ping_pong_rate_per_completed_ho": 0.0,
+    "ho_attempts": 107,
+    "ho_completed": 107,
+    "ho_failed": 0,
+    "ho_ongoing_at_end": 0,
+    "rlf_events": 0,
+    "ping_pong_events": 0,
+    "deadline_misses": 4696,
+    "undelivered_packets": 288,
+    "num_scenarios": 10
+  }
+}

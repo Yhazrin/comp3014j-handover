@@ -1,0 +1,34 @@
+{
+  "public_cli_scores": {
+    "BASELINE": 126.45,
+    "MODIFIED": 126.26,
+    "ROLLBACK": 126.45,
+    "REUSED_HOLDOUT": 115.43
+  },
+  "fresh_synthetic": {
+    "seeds": "85301--85320, new synthetic mobility, same published topology; not private traces",
+    "results": {
+      "A3": {
+        "S": 100.0,
+        "ho_attempts": 678,
+        "rlf_events": 2,
+        "deadline_delivery_ratio": 0.9130798412936023,
+        "outage_fraction": 0.010072893360404707
+      },
+      "queue": {
+        "S": 117.27,
+        "ho_attempts": 370,
+        "rlf_events": 0,
+        "deadline_delivery_ratio": 0.9123080819013639,
+        "outage_fraction": 0.007153384991160428
+      },
+      "rescue": {
+        "S": 117.55,
+        "ho_attempts": 376,
+        "rlf_events": 0,
+        "deadline_delivery_ratio": 0.9123182883075339,
+        "outage_fraction": 0.006724227551197157
+      }
+    }
+  }
+}

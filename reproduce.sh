@@ -1,12 +1,13 @@
 #!/bin/sh
-# Reproduce one full public evaluation; never overwrite saved evidence runs.
+# Group 25: evaluate the canonical submission/algorithm.py, not historical V10.
 set -eu
 HERE=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
-BENCH_ROOT=${BENCH_ROOT:-"$HERE/../COMP3014J Assignment/student/handover-bench"}
-PYTHON=${PYTHON:-"$HERE/.venv/bin/python"}
-OUTPUT=${1:-"$HERE/reproduced-$(date +%Y%m%d-%H%M%S)"}
-[ -f "$BENCH_ROOT/src/handover_bench/cli.py" ] || { echo 'Set BENCH_ROOT to the supplied handover-bench directory.' >&2; exit 2; }
-[ ! -e "$OUTPUT" ] || { echo "Refusing to overwrite existing output: $OUTPUT" >&2; exit 3; }
+BENCH_ROOT=$(CDPATH= cd -- "${BENCH_ROOT:-$HERE/course/benchmark}" && pwd)
+PYTHON=${PYTHON:-python3}
+OUTPUT=${1:-"$HERE/reproduced-public"}
+[ ! -e "$OUTPUT" ] || { echo "Choose a new output directory: $OUTPUT" >&2; exit 3; }
 export PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1
 export PYTHONPATH="$BENCH_ROOT/src${PYTHONPATH:+:$PYTHONPATH}"
-exec "$PYTHON" -m handover_bench.cli evaluate --algorithm "$HERE/submission/algorithm.py" --suite "$BENCH_ROOT/data/practice" --output "$OUTPUT"
+"$PYTHON" -m handover_bench.cli evaluate --algorithm "$HERE/submission/algorithm.py" --suite "$BENCH_ROOT/data/practice" --output "$OUTPUT/queue"
+"$PYTHON" -m handover_bench.cli evaluate --algorithm "$BENCH_ROOT/examples/algorithm.py" --suite "$BENCH_ROOT/data/practice" --output "$OUTPUT/starter"
+"$PYTHON" "$HERE/tools/table2.py" "$OUTPUT" "$HERE/submission/algorithm.py"

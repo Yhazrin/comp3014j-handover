@@ -3,7 +3,7 @@ import argparse, csv, os
 from pathlib import Path
 root = Path(__file__).resolve().parents[1]
 p = argparse.ArgumentParser()
-p.add_argument('--bench', type=Path, default=Path(os.environ.get('BENCH_ROOT', str(root.parent / 'COMP3014J Assignment/student/handover-bench'))))
+p.add_argument('--bench', type=Path, default=Path(os.environ.get('BENCH_ROOT', str(root / 'course/benchmark'))))
 p.add_argument('--output', type=Path, default=root / 'suites')
 a = p.parse_args()
 if a.output.exists():

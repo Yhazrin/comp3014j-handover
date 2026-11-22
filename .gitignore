@@ -8,9 +8,16 @@ __pycache__/
 reproduced-*/
 evidence/report_preview*/
 evidence/report_metadata.json
-# Course-provided inputs stay local
+# Exclude unrelated local course copies and datasets; only the canonical course package is tracked
 COMP3014J Assignment/
 handover-bench/
 data/
 suites/
 *.zip
+
+!course/benchmark/data/
+!course/benchmark/data/**
+runs/
+report/*.aux
+report/*.log
+report/*.out

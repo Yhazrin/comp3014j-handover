@@ -1,0 +1,130 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=24mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,booktabs,array,microtype}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}
+\newcommand{\capline}[1]{\par\smallskip\textit{#1}\par}
+\begin{document}
+\begin{center}
+{\small COMP3014J --- Performance of Computer Systems}\par
+{\Large\bfseries Volatility-Aware Safety Handover}\par
+Haoze Yang, Fanshu Yu and Heng Zhang\\
+{\small Brightspace Group 25 \quad $\cdot$ \quad Policy VASH-Q (queue-memory candidate)}
+\end{center}
+\textbf{Abstract.}
+On ten public traces, VASH-Q requested 162 handovers against 345 for A3. Outage fell from 1.09\% to 0.68\%, while on-time delivery fell by 0.44 percentage points. The resulting index was 126.45 against A3 at 100 and the always-stay starter at 84.93. A recent queue can justify an earlier handover even after that queue has drained; this improved the public score over our previous policy, but not on every radio perturbation.
+\section{Objective and policy design}
+A3 starts a timer when a neighbour's power advantage exceeds a margin. The starter never switches. We wanted to keep a usable serving cell even when another cell was stronger, without staying so long that the link failed. We used only the current device's measurements and its own history.
+\paragraph{How usable is the serving cell?}
+The interface gives serving power but not serving SINR. Write $P_s,P_j$ for linear received powers, $T$ for total received power plus noise, and $\gamma_j=P_j/(T-P_j)$ for a neighbour's linear SINR. Each neighbour then gives an estimate $x_j=(P_j/P_s)(1+1/\gamma_j)$ of $T/P_s$. In decibels our estimate is
+\[
+ \widehat s=-10\log_{10}\!\left(\operatorname{median}_j(x_j)-1\right).
+\]
+This assumes simultaneous measurements with a common $T$. If the median is at most one or $\max x_j/\min x_j\ge1.12$, we clear the risk history. In that branch we request the strongest eligible neighbour only if its power advantage exceeds 6 dB, its SINR is nonnegative and the cooldown has expired. Without a usable candidate we stay.
+\paragraph{Which target is worth a switch?}
+For each observed cell we smooth its squared SINR change per elapsed replay step, weighting the latest value by 0.15. A new cell starts at $1\,\mathrm{dB}^2$. We discard absent cells after a normal update. For a neighbour with SINR $s_j$ and smoothed value $v_j$, we rank by $q_j=s_j-k\sqrt{v_j}$. This discounts a strong but unstable target.
+\begin{center}\begin{tabular}{lrrr}\toprule
+Speed (m/s)&Source boundary (dB)&Quality floor (dB)&$k$\\\midrule
+Below 3&$-9$&$-4$&0.5\\
+3 to below 15&$-7$&$-2$&1.5\\
+15 or above&$-8$&$-3$&1.0\\\bottomrule
+\end{tabular}\end{center}
+\newpage
+\paragraph{Decision rule (normal branch).}
+\begin{enumerate}\setlength\itemsep{1pt}
+\item Estimate serving SINR, update each cell's volatility and select the speed row.
+\item Track recent unserved traffic as $B=\max(b,0.95^{\Delta/200}B_{\rm old})$, where $b$ is the current queue in bytes and $\Delta$ is the replay step in ms. Raise the source boundary by $2\min(1,B/100000)$ dB. Start the risk timer below $-8$ dB and clear it above $-6$ dB or when the serving cell changes. After 800 ms of risk, lower the target floor to $-6$ dB.
+\item Among eligible neighbours above or at the quality floor, take the highest $q_j$ (cell ID breaks ties). Stay if no neighbour qualifies. Otherwise raise the boundary by $\min(1,\max(0,q_j/6))$ dB for the chosen target. After 800 ms of risk, use a boundary of at least $-6$ dB.
+\item Request that target only if the source is below its boundary, the target's raw SINR exceeds the source estimate by more than 3 dB, and at least 1 s has elapsed since the last request.
+\end{enumerate}
+With $K$ candidates, sorting for the median costs $O(K\log K)$ time. Per-device state costs $O(K)$ memory. The policy does not read routes, other devices' state or future samples.
+\section{Reproducible experimental setup}
+We ran the official \texttt{handover-bench} v0.1.0 evaluator on Mac (Apple M5, Python 3.11, default configuration, 200 ms replay). All compared policies used the same data and simulator. The policy uses only \texttt{math} and \texttt{statistics}.
+\begin{center}\begin{tabular}{lrr}\toprule
+Public traces & V10 & VASH-Q\\\midrule
+Seeds 1--6 (development)&131.97&132.22\\
+Seeds 7--10 (reused holdout)&115.13&115.59\\
+All ten&126.13&126.45\\\bottomrule
+\end{tabular}\end{center}
+We selected rules on seeds 1--6 and a radio-perturbed copy (random seed 3014). We preferred the rule that improved on its predecessor on both sets. Seeds 7--10 had already been evaluated during earlier work: the comparison is not blind. The ten-scenario score includes development data.
+\paragraph{Reproduction.} Install the original course package as described in its README. From its root, place the evaluated policy at \texttt{algorithm.py} and run the official command with a new output directory:
+\begin{verbatim}
+handover-bench evaluate --algorithm algorithm.py \
+  --suite data/practice --output results/vash-public
+handover-bench evaluate --algorithm examples/algorithm.py \
+  --suite data/practice --output results/starter-public
+\end{verbatim}
+Evaluated VASH-Q SHA-256 (continuous hex string):\\
+{\small\ttfamily 479bb93f6d43d4a9d84baac4f79f318f3456bda34bedb79a390ee25e491f0e7f}
+\newpage
+\section{Results against A3 and the starter}
+\capline{Table 1. Same ten public traces. Change and outcome compare VASH-Q with A3.}
+\begin{center}\small\begin{tabular}{lrrrrl}\toprule
+Metric & Starter & A3 & VASH-Q & Change & Outcome\\\midrule
+Goodput (fraction)&0.974743&0.997774&0.997752&$-0.000023$&Worse\\
+On-time delivery (fraction)&0.862320&0.935666&0.931307&$-0.004359$&Worse\\
+Outage (fraction)&0.042800&0.010899&0.006801&$-0.004098$&Better\\
+Radio link failures / UE-min&0.530218&0.026239&0.000000&$-0.026239$&Better\\
+Handover failures / UE-min&0.000000&0.026239&0.000000&$-0.026239$&Better\\
+Ping-pongs / UE-min&0.000000&0.232120&0.000000&$-0.232120$&Better\\
+Handover attempts / UE-min&0.000000&2.582628&1.224331&$-1.358297$&Better\\
+\midrule Composite index&84.93&100.00&126.45&$+26.45$&Better\\\bottomrule
+\end{tabular}\end{center}
+The starter made no requests, but recorded 72 radio link failures and spent 4.28\% of its active time in outage on average across scenarios. VASH-Q recorded no radio link failures. The benchmark first averages each metric equally across scenarios, then combines the seven smoothed ratios using a weighted geometric mean [2]. A3 recorded 32 ping-pongs and three failed handovers. VASH recorded neither; of its 162 requests, 157 finished and five were still in progress at the end of the trace.
+\capline{Table 2. Public results by scenario. Changes are relative to A3.}
+\begin{center}\small\begin{tabular}{rrrrr}\toprule
+Seed & Index & Requests (change) & Outage (pp) & On time (pp) \\\midrule
+1 & 142.63 & $-16$ & $-0.762$ & $-0.526$ \\
+2 & 112.53 & $-10$ & $-0.022$ & $+0.093$ \\
+3 & 116.51 & $-24$ & $-0.298$ & $-0.496$ \\
+4 & 154.64 & $-13$ & $-0.553$ & $-2.277$ \\
+5 & 120.41 & $-27$ & $-0.549$ & $+0.013$ \\
+6 & 117.19 & $-19$ & $-0.435$ & $-0.106$ \\
+7 & 122.75 & $-25$ & $-0.638$ & $+1.308$ \\
+8 & 109.53 & $-13$ & $-0.186$ & $-0.279$ \\
+9 & 112.06 & $-10$ & $-0.193$ & $-0.332$ \\
+10 & 117.19 & $-26$ & $-0.463$ & $-1.757$ \\
+\bottomrule\end{tabular}\end{center}
+\section{Evidence for the improvement}
+\capline{Table 3. Successive policies on the same six development traces.}
+\begin{center}\begin{tabular}{lrrrr}\toprule
+Policy or change&Index&Attempts&Link failures&Outage (\%)\\\midrule
+A3&100.00&217&3&1.204\\
+V10 unchanged&131.97&101&0&0.810\\
+Confidence and sustained-risk boundary&132.15&103&0&0.785\\
+Add queue memory (VASH-Q)&132.22&108&0&0.768\\\bottomrule
+\end{tabular}\end{center}
+The last two rows differ only in their treatment of queued bytes. Remembering recent backlog raised on-time delivery from 91.91\% to 92.76\% but added five requests. A short-term signal forecaster did not beat this rule on both development conditions; we left it out.
+\newpage
+\section{Regressions, limitations, and generalisation}
+\paragraph{Where staying hurts.}
+Goodput fell by 0.0023 percentage points against A3 and on-time delivery fell by 0.4359 points. Their respective score multipliers were about 0.99999 and 0.99909. The mean of the ten scenario-level 99th-percentile delays was 619 ms against 573 ms for A3. VASH-Q made fewer requests and reduced outage on all ten traces, but on-time delivery fell on seven. Seed 4 illustrates the trade-off: 13 fewer requests and 0.553 points less outage, yet 2.277 points fewer packets arrived on time. On seed 7, both outage and on-time delivery improved. Seed 8 had the lowest index (109.53).
+\paragraph{How well does the change transfer?} A3 had three radio link failures on the six development traces and none on the remaining four, leaving less room for improvement there. We kept the four holdout mobility and traffic traces fixed and applied three previously unused radio perturbations after freezing VASH-Q. Link powers received a Gaussian shadowing offset (1.5 dB standard deviation, 20 m correlation distance), and SINR was recomputed from the perturbed powers. Each column compares the two policies with the same perturbed A3.
+\begin{center}\begin{tabular}{lrrr}\toprule
+Noise seed&17011&17012&17013\\\midrule
+V10&132.51&116.62&109.86\\
+VASH-Q&131.35&115.77&110.89\\\bottomrule
+\end{tabular}\end{center}
+The new policy lost on two of the three paired comparisons. The public gain is therefore not a consistent gain under small changes in radio conditions. These tests reuse trajectories and the common-power model; they do not represent newly sampled mobility or private grades. Appendix A tests all three policies on fresh synthetic trajectories. The group's earlier synthetic study [3] evaluated V10 rather than VASH-Q. In that study always-stay outscored V10 under strong fading despite worse on-time delivery, another reason to read the service metrics alongside the index.
+\paragraph{Cost.} The official evaluator recorded 2.168 s for the candidate run on the ten public traces. This is the candidate's reported runtime, not the wall time of the entire CLI with its two baselines.
+\section{Sources and development disclosure}
+[1] COMP3014J assignment instructions and background, 2026. [2] Supplied \texttt{handover-bench} v0.1.0: README, simulator, metrics and scoring implementation. [3] Group 25, VASH study, 19 November 2026, synthetic robustness tests (p.~6).
+\par The course provided the engine, traces and baselines. Our policy estimates serving SINR and discounts unstable targets. We used OpenAI Codex/ChatGPT for derivation, coding, running and interpreting experiments, and drafting and editing this report.
+\par\textit{Group draft: add confirmed student numbers and each member's actual contribution before submission.}
+\newpage
+\appendix
+\section{Does waiting one replay step help?}
+On the six development traces VASH-Q requested 108 handovers. We replayed each trace once per request, changing just that decision to stay. After the 200 ms delay the same policy resumed and all devices could react normally. Eight individual delays raised the suite index, thirty left the displayed score unchanged and seventy lowered it. In six cases the replay finished with fewer requests. The score changes are separate comparisons and cannot be added together.
+\par We also tested making a request earlier when a target already passed its safety checks. Counterfactual outcomes were used offline only. A two-rule variant acted slightly earlier on quiet links and sometimes waited a step if the serving link was still usable. This saved four requests across the public suite, but its on-time delivery fell from 93.13\% to 93.09\% and its index on the four reused traces fell from 115.59 to 115.35.
+\paragraph{Fresh synthetic mobility.}
+After freezing V10, VASH-Q and the timing variant, we generated ten additional scenarios (seeds 47301--47310). These use the published nine-cell geometry and 200 ms clock. Each scenario has 60 devices with fresh starts, headings, radio innovations and packet schedules. Session duration, speed, altitude and traffic characteristics are resampled from seeds 1--6; no trajectory is copied. Link power follows $11-35\log_{10}(d)$ dBm plus 4 dB Gaussian shadowing correlated over 50 m, with distance $d$ in metres (minimum 8 m). Radio noise is $-100$ dBm. A3 is rerun on each suite.
+\begin{center}\small\begin{tabular}{lrrrrr}\toprule
+&Public&New synthetic&New: requests&New: RLF&New: on time\\\midrule
+A3&100.00&100.00&372&3&90.48\%\\
+V10&126.13&119.86&173&1&90.67\%\\
+VASH-Q&126.45&122.34&194&0&90.93\%\\
+Timing variant&126.53&122.31&192&0&90.86\%\\\bottomrule
+\end{tabular}\end{center}
+We kept VASH-Q. Its queue-aware change improved on V10 on both suites, while the additional timing rules bought only 0.08 public points and did not improve the fresh synthetic result. Each suite has its own A3 reference. Synthetic routes use simplified turns and boundary reflections; packet streams use resampled interarrival gaps rather than real correlated application sessions. This is a transfer check, not an estimate of the instructor's mark.
+\end{document}

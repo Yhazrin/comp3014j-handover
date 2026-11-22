@@ -1,75 +1,48 @@
-# COMP3014J · VASH Handover
+# COMP3014J · Group 25 / VASH-Q
 
-三人小组协作仓库：切换算法、英文报告、报告源码与公开实验结果。
+**评审入口：** [老师的任务要求](course/REQUIREMENTS.md) · [现状、尝试与证据](review/STATUS.md) · [给 Pro / Agent 的任务单](review/AGENT_PROMPT.md)
 
-## 当前版本
-
-- 策略：VASH 1.0 / V10，`StudentPolicy.reset` 与 `StudentPolicy.decide`。
-- 公开十场景：**126.13**，A3 基准为 **100**。
-- 开发集 seeds 1–6：131.97；复用留出集 seeds 7–10：115.13。
-- 报告：第 2 版，共 8 页，正文 6 页。
-
-## 文件入口
+此仓库包含两份原始作业说明、原版评测器及十个公开场景。克隆后可以直接评测，不需要作者电脑上的文件。当前保留的版本是 **VASH-Q（完整公开集 126.45）**，不是较早的 V10（126.13），也不是单次公开得分更高的 timing（126.53）。**127 / 131 / 135 是私有算法评测的 A− / A / A+ 门槛。**
 
 | 文件 | 用途 |
 |---|---|
-| [algorithm.py](submission/algorithm.py) | 算法提交文件 |
-| [report.pdf](submission/report.pdf) | 英文报告 |
-| [报告源码](tools/build_reference_report.py) | 编辑正文、表格和图表，重新导出 PDF |
-| [中文讲解](LEARNING_GUIDE.md) | 算法推导、实验解释和建议分工 |
-| [公开结果](experiments/v10_full/results.json) | 指标与逐场景结果 |
-| [上界研究笔记](SCORE_BOUND_NOTE.md) | 单独保留的离线分析 |
+| [submission/algorithm.py](submission/algorithm.py) · [submission/report.pdf](submission/report.pdf) | 当前保留的两份提交候选，一一配套 |
+| [report/report.tex](report/report.tex) | 当前五页英文黑白报告的可编辑源，不是旧版 PDF 构建器 |
+| [两份官方 DOCX](course/brief/) · [官方 README](course/benchmark/README.md) · [报告模板](course/benchmark/docs/report_template.md) | 评分、约束、接口和报告要求；若摘要有出入，以课程原文为准 |
+| [公开结果](review/evidence/summary.json) · [逐场景 JSON](review/evidence/public-queue.json) · [受控消融](review/evidence/table3.csv) | 真实评测和版本比较；公开数据与合成数据分开 |
+| [review/variants/](review/variants/) · [合成对照工具](tools/compare_transfer.py) | 历史对照和新想法的同场测试，不是提交文件 |
 
-报告及代码中的 `GROUP_ID`、`MEMBER_1/2/3` 待填写真实信息。课程允许 AI 辅助编码和写作，报告中保留了实际使用范围声明。
+## 复现（在仓库根目录）
 
-## 用公开数据运行
-
-老师的原始课程包和数据保留在各自电脑上，不放入本仓库。先准备 Python 3.11，再执行：
+需要 Python 3.11。先创建环境，安装仓库里的官方包：
 
 ```sh
-git clone https://github.com/Yhazrin/comp3014j-handover.git
-cd comp3014j-handover
 python3.11 -m venv .venv
-.venv/bin/python -m pip install -r requirements-evaluation.txt
-export BENCH_ROOT='/你的路径/handover-bench'
-./reproduce.sh
+. .venv/bin/activate
+python -m pip install ./course/benchmark
+PYTHON=python ./reproduce.sh runs/public-q
+python -B tools/ablation.py course/benchmark runs/table3.csv
 ```
 
-`BENCH_ROOT` 指向同时包含 `src/` 和 `data/practice/` 的课程目录。脚本自动创建结果目录；冻结版本的已有实测指数为 126.13。
+第一条评测运行提交候选和**老师发的真实 starter**；A3 由官方评测器在同一组场景运行。预期：starter **84.93**，A3 **100.00**，VASH-Q **126.45**；162 次请求，中断占比 **0.6801%**。输出目录包括原始 JSON、HTML、摘要和表 2；消融命令生成表 3。重复运行换一个新的输出路径。历史复现环境的精确依赖见 [requirements-evaluation.txt](requirements-evaluation.txt)。
 
-需要复现开发/留出划分时：
+测试新代码时，从当前候选复制一份到独立分支，不要一开始就覆盖基线：
 
 ```sh
-.venv/bin/python tools/prepare_splits.py --bench "$BENCH_ROOT"
+git switch -c review/next-policy
+mkdir -p candidates
+cp submission/algorithm.py candidates/next.py
+# 编辑 candidates/next.py 后：
+python -m handover_bench.cli evaluate --algorithm candidates/next.py \
+  --suite course/benchmark/data/practice --output runs/candidate-public
+python -B tools/compare_transfer.py --candidate candidates/next.py \
+  --start 120301 --count 20 --output runs/paired-transfer.json
 ```
 
-## 编辑与生成报告
+120301 起这一段是**建议预留**的新种子，不是已取得的结果。第一次揭晓后应记录为已用，不能再称为盲测。要复现已发表的十个合成场景对照，使用 `--candidate review/variants/timing.py --start 47301 --count 10`，预期 Q **122.34**，timing **122.31**。生成器与课程私有数据无关。
 
-```sh
-.venv/bin/python -m pip install -r requirements-report.txt
-.venv/bin/python tools/build_reference_report.py
-```
+## 报告与提交
 
-正文与布局在 `tools/build_reference_report.py`，生成文件是 `submission/report.pdf`。构建器使用仓库中保存的实验结果，不会自动运行模拟器。它将结果绑定到当前冻结算法的 SHA-256；修改算法后，应先更新对应实验结果、代码哈希和报告中的说明，再生成报告。
+如需编译报告，使用 `pdflatex -interaction=nonstopmode -halt-on-error -output-directory=report report/report.tex`。只有确认数据和哈希一致后才替换提交 PDF。实际交 Brightspace 前，组员须在本地补上三人的真实学号、确认各自实际贡献；修改代码头注释也会改变哈希，应重跑评测并更新报告。公开仓库不放学号。
 
-## 三人协作
-
-建议分别负责算法、实验、报告；具体贡献按实际完成的工作记录。
-
-```sh
-git switch -c report/member-details
-# 修改文件
-git add submission/algorithm.py tools/build_reference_report.py submission/report.pdf
-git commit -m "docs: fill group details"
-git push -u origin report/member-details
-```
-
-在 GitHub 发起 Pull Request，再合并到 `main`。公开仓库可以直接浏览或 fork；需要直接推送分支的同学由仓库拥有者添加为 collaborator。
-
-正式交作业时只提交 `submission/algorithm.py` 与 `submission/report.pdf`。不要上传整个协作仓库。
-
-## 结果与材料范围
-
-本仓库没有老师提供的原始数据、课程压缩包、本机虚拟环境或完整执行日志。发布的 JSON 来源于已有公开实验：本机绝对路径已改为相对路径，逐 UE 明细已省略；聚合指标和逐场景结果保留。报告中的部分历史归档引用指向原本的完整本地研究目录。
-
-开发集、复用留出集和最终私有评测各有不同用途。最终私有评测由老师运行；小组使用公开数据完成开发、复现和报告。
+旧 `experiments/v10_*`、`LEARNING_GUIDE.md`、旧 ReportLab 构建器及旧版证据是历史资料，不能替代上述 VASH-Q 文件。官方包保留原版 [LICENSE](course/benchmark/LICENSE) 和 [第三方声明](course/benchmark/THIRD_PARTY_NOTICES.md)。本仓库不是课程发布渠道，也没有私有评测结果。
